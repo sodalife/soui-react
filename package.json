@@ -1,0 +1,13 @@
+{
+  "name": "@sodalife/soui-react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.sodalife.xyz:soda/soui-react.git"
+  },
+  "author": "yelo",
+  "license": "Apache-2.0"
+}
