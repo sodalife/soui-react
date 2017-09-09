@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import cx from 'classnames'
 
-import { Icon } from '../../../../src'
+import { Icon } from '../../../../dist/soui'
 import styles from './style.pcss'
 
 storiesOf('Icon', module)
