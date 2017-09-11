@@ -15,7 +15,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9001 -c storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "build-storybook": "build-storybook -c storybook",
+    "build-storybook": "npm run build && build-storybook -c storybook",
     "clean": "rm -rf ./dist ./storybook-static",
     "build": "rollup -c"
   },
