@@ -24,9 +24,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "keymirror": "^0.1.1",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-info": "^3.2.9",
     "@storybook/addon-knobs": "^3.2.8",
     "@storybook/addon-options": "^3.2.6",

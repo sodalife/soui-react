@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import cx from 'classnames'
 import _ from 'lodash'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, color, select, number } from '@storybook/addon-knobs';
+import { withKnobs, color, select, number } from '@storybook/addon-knobs'
 
 import { Icon } from '../../../../dist/soui'
 import styles from './style.pcss'
