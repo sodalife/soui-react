@@ -7,9 +7,8 @@ setOptions({
 })
 
 function loadStories() {
-  require('./stories/index.js')
   require('./stories/ui/icon')
-  // You can require as many stories as you need.
+  require('./stories/ui/button')
 }
 
 configure(loadStories, module)
