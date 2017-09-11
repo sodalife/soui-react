@@ -1,1 +1,1 @@
-export { default as Icon } from './ui/icon/index.jsx'
+export { default as Icon } from './icon/index.jsx'

@@ -23,9 +23,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "keymirror": "^0.1.1",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addon-options": "^3.2.6",
     "@storybook/react": "^3.2.8",
     "autoprefixer": "^7.1.4",
     "babel-loader": "^7.1.2",
@@ -39,6 +43,7 @@
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
     "file-loader": "^0.11.2",
+    "lodash": "^4.17.4",
     "lost": "^8.2.0",
     "postcss-calc": "^6.0.0",
     "postcss-color-function": "^4.0.0",
