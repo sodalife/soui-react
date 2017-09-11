@@ -9,7 +9,7 @@ import { Icon } from '../../../../dist/soui'
 import styles from './style.pcss'
 
 const groups = (function () {
-  const types = _.keys(Icon.TYPES)
+  const types = _.keys(Icon.TYPE)
   const result = _({
     'circle-outline': /-circle-o$/,
     'circle': /-circle$/,
@@ -31,7 +31,7 @@ const stories = storiesOf('图标 Icon', module)
 stories.addDecorator(withKnobs)
 
 stories.add('基础', withInfo()(() => {
-  let type = select('type', Icon.TYPES, 'coding')
+  let type = select('type', Icon.TYPE, 'coding')
   return (<div className={cx(styles.view, styles.center)}>
     <Icon className={styles.icon} type={type} style={{ color: color('style.color', '#666'), fontSize: number('style.fontSize', 160) }} />
   </div>)
