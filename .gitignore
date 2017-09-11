@@ -3,5 +3,6 @@
 node_modules
 npm-debug.log
 
-# alive
+# build
 /dist
+/storybook-static
