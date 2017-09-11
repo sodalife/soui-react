@@ -6,7 +6,7 @@ import './assets/iconfont'
 
 import styles from './style.pcss'
 
-import TYPES from './types'
+import TYPE from './types'
 
 const Icon = ({ type, className = '', ...props }) => {
   return (<svg className={cx(styles.icon, className)} aria-hidden="true" {...props}>
@@ -19,6 +19,6 @@ Icon.propTypes = {
   className: PropTypes.string,
 }
 
-Icon.TYPES = TYPES
+Icon.TYPE = TYPE
 
 export default Icon
