@@ -2,13 +2,14 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import cx from 'classnames'
 import _ from 'lodash'
-import { withKnobs, color } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info'
+import { withKnobs, color, select, number } from '@storybook/addon-knobs';
 
 import { Icon } from '../../../../dist/soui'
 import styles from './style.pcss'
 
 const groups = (function () {
-  const types = _.keys(Icon.types)
+  const types = _.keys(Icon.TYPES)
   const result = _({
     'circle-outline': /-circle-o$/,
     'circle': /-circle$/,
@@ -28,6 +29,13 @@ const groups = (function () {
 const stories = storiesOf('图标 Icon', module)
 
 stories.addDecorator(withKnobs)
+
+stories.add('基础', withInfo()(() => {
+  let type = select('type', Icon.TYPES, 'coding')
+  return (<div className={cx(styles.view, styles.center)}>
+    <Icon className={styles.icon} type={type} style={{ color: color('style.color', '#666'), fontSize: number('style.fontSize', 160) }} />
+  </div>)
+}))
 
 stories.add('全部图标', () => (
   <div className={styles.view}>
