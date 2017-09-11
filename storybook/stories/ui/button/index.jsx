@@ -21,7 +21,7 @@ stories.add('基础', withInfo()(() => {
     children: text('children', '点击'),
   }
   return (<div className={styles.view}>
-    <p><Button onClick={action(`clicked: ${JSON.stringify(props)}`)} {...props} /></p>
+    <p><Button {...props}  onClick={action(`clicked: ${JSON.stringify(props)}`)}/></p>
   </div>)
 }))
 
@@ -29,8 +29,8 @@ stories.add('所有按钮', () => {
   return (<div className={styles.view}>
     {_.values(Button.SIZE).map((size) => {
       return _.values(Button.TYPE).map((type) => {
-        return (<p><Button onClick={action(`[clicked] size: ${size}, type: ${type}`)} {...{ type, size }}>Click me</Button></p>)
-      }).concat(<p><Button onClick={action(`[clicked] size: ${size}, disabled`)} size={size} disabled>Click me</Button></p>)
+        return (<p><Button {...{ type, size }} onClick={action(`[clicked] size: ${size}, type: ${type}`)}>Click me</Button></p>)
+      }).concat(<p><Button size={size} disabled onClick={action(`[clicked] size: ${size}, disabled`)}>Click me</Button></p>)
     })}
   </div>)
 })
