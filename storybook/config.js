@@ -6,9 +6,10 @@ setOptions({
   downPanelInRight: true,
 })
 
-function loadStories() {
+function loadStories () {
   require('./stories/ui/icon')
   require('./stories/ui/button')
+  require('./stories/ui/image')
 }
 
 configure(loadStories, module)
