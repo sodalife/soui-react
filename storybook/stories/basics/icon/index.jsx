@@ -26,7 +26,7 @@ const groups = (function () {
   }
 }())
 
-const stories = storiesOf('图标 Icon', module)
+const stories = storiesOf('基础元素 / 图标 Icon', module)
 
 stories.addDecorator(withKnobs)
 

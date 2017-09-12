@@ -10,7 +10,7 @@ import { Button } from '../../../../dist/soui'
 
 import styles from './style.pcss'
 
-const stories = storiesOf('按钮 Button', module)
+const stories = storiesOf('基础元素 / 按钮 Button', module)
 
 stories.addDecorator(withKnobs)
 

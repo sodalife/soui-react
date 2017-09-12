@@ -10,7 +10,7 @@ import { Notice } from '../../../../dist/soui'
 
 import styles from './style.pcss'
 
-const stories = storiesOf('通知 Notice (实验性)', module)
+const stories = storiesOf('组件 / 通知 Notice (实验性)', module)
 
 stories.addDecorator(withKnobs)
 

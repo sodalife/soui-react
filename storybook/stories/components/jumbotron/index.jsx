@@ -12,7 +12,7 @@ import styles from './style.pcss'
 
 const { JumbotronButton } = Jumbotron
 
-const stories = storiesOf('大荧幕 Jumbotron', module)
+const stories = storiesOf('组件 / 大荧幕 Jumbotron', module)
 
 stories.addDecorator(withKnobs)
 

@@ -12,7 +12,7 @@ import styles from './style.pcss'
 
 const { ViewMain, ViewCard } = View
 
-const stories = storiesOf('视图 View', module)
+const stories = storiesOf('基础元素 / 视图 View', module)
 
 stories.addDecorator(withKnobs)
 

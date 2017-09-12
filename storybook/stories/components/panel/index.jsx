@@ -12,7 +12,7 @@ import styles from './style.pcss'
 
 const { PanelItem } = Panel
 
-const stories = storiesOf('面板 Panel', module)
+const stories = storiesOf('组件 / 面板 Panel', module)
 
 stories.addDecorator(withKnobs)
 
