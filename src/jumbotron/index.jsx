@@ -1,16 +1,21 @@
 import _ from 'underscore'
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import styles from './style.pcss'
 
-const Jumbotron = ({ children, className = '', ...props }) => {
+const Jumbotron = ({ children, className, ...props }) => {
   return (<div className={cx(styles.jumbotron, className)} {...props}>
     {children}
   </div>)
 }
+Jumbotron.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+}
 
-const JumbotronButton = ({ size, children, className = '', ...props }) => {
+const JumbotronButton = ({ size, children, className, ...props }) => {
   return (<a className={cx(size === JumbotronButton.SIZE.SMALL ? styles.smallButton : styles.button, className)} {...props}>
     { children }
   </a>)
@@ -18,6 +23,11 @@ const JumbotronButton = ({ size, children, className = '', ...props }) => {
 JumbotronButton.SIZE = {
   DEFAULT: '',
   SMALL: 'small',
+}
+Jumbotron.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  size: PropTypes.string,
 }
 
 export default Jumbotron
