@@ -10,6 +10,7 @@ function loadStories () {
   require('./stories/ui/icon')
   require('./stories/ui/button')
   require('./stories/ui/image')
+  require('./stories/ui/list')
 }
 
 configure(loadStories, module)
