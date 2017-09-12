@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import _ from 'lodash'
 import cx from 'classnames'
 import { storiesOf } from '@storybook/react'
@@ -17,8 +17,8 @@ stories.addDecorator(withKnobs)
 stories.add('基础', withInfo()(() => {
   let props = {
     selected: boolean('selected', false),
-    onClick: action('click'),
     children: text('children', '内容'),
+    onClick: action('click'),
     className: styles.tag,
   }
   return (<div className={cx(styles.phone)}>
@@ -26,4 +26,33 @@ stories.add('基础', withInfo()(() => {
       _.range(4).map((i) => <Tag key={i} {...props}/>)
     }
   </div>)
+}))
+
+stories.add('组合使用', withInfo()(() => {
+  class Story extends Component {
+    constructor () {
+      super()
+      this.state = {
+        value: null,
+      }
+    }
+    render () {
+      return (<div className={styles.phone}>
+        <div className={styles.group}>
+          {
+            _.range(4).map((i) => (
+              <Tag
+                key={i}
+                selected={this.state.value === i}
+                onClick={(selected) => this.setState({ value: selected ? i : null })}
+                className={styles.tag}>
+                {i}
+              </Tag>
+            ))
+          }
+        </div>
+      </div>)
+    }
+  }
+  return <Story />
 }))
