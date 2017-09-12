@@ -1,0 +1,48 @@
+.panel {
+  background-color: #fff;
+  .panelTitle {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    padding: 0 16px;
+    color: #333;
+    border-left: 2px solid #65d065;
+    box-sizing: border-box;
+    .panelSubtitle {
+      float: right;
+      font-size: 13px;
+      color: #999;
+    }
+  }
+  .panelItem {
+    .container {
+      display: flex;
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+      &:active {
+        background-color: #efefef;
+      }
+      .thumbnail {
+        width: 100px;
+        margin-right: 14px;
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      .content {
+        flex: 1;
+        line-height: 1.4em;
+        .title {
+          font-size: 16px;
+          color: #000;
+          margin-bottom: 12px;
+        }
+        .description {
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+    }
+  }
+}
