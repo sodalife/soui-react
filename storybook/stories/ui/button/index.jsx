@@ -22,7 +22,7 @@ stories.add('基础', withInfo()(() => {
     children: text('children', '点击'),
   }
   return (<div className={styles.phone}>
-    <Button {...props}  onClick={action(`clicked: ${JSON.stringify(props)}`)}/>
+    <Button {...props} onClick={action(`clicked: ${JSON.stringify(props)}`)}/>
   </div>)
 }))
 
