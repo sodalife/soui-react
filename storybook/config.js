@@ -7,17 +7,19 @@ setOptions({
 })
 
 function loadStories () {
-  require('./stories/ui/icon')
-  require('./stories/ui/button')
-  require('./stories/ui/image')
-  require('./stories/ui/list')
-  require('./stories/ui/notice')
-  require('./stories/ui/panel')
-  require('./stories/ui/tag')
-  require('./stories/ui/throttle')
-  require('./stories/ui/jumbotron')
-  require('./stories/ui/view')
-  require('./stories/ui/navbar')
+  require('./stories/basics/icon')
+  require('./stories/basics/button')
+  require('./stories/basics/image')
+  require('./stories/basics/view')
+
+  require('./stories/components/list')
+  require('./stories/components/notice')
+  require('./stories/components/panel')
+  require('./stories/components/tag')
+  require('./stories/components/jumbotron')
+  require('./stories/components/navbar')
+
+  require('./stories/helpers/throttle')
 }
 
 configure(loadStories, module)

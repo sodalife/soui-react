@@ -10,7 +10,7 @@ import { Image } from '../../../../dist/soui'
 
 import styles from './style.pcss'
 
-const stories = storiesOf('图片 Image', module)
+const stories = storiesOf('基础元素 / 图片 Image', module)
 
 stories.addDecorator(withKnobs)
 

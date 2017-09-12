@@ -12,7 +12,7 @@ import styles from './style.pcss'
 
 const { ListItem, ListSubItem, ListBrief, ListGroup, ListTitle, ListButton } = List
 
-const stories = storiesOf('列表 List', module)
+const stories = storiesOf('组件 / 列表 List', module)
 
 stories.addDecorator(withKnobs)
 

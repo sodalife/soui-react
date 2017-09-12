@@ -10,7 +10,7 @@ import { Throttle } from '../../../../dist/soui'
 
 import styles from './style.pcss'
 
-const stories = storiesOf('节流阀 Throttle (实验性)', module)
+const stories = storiesOf('助手 / 节流阀 Throttle (实验性)', module)
 
 stories.addDecorator(withKnobs)
 

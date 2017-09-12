@@ -12,7 +12,7 @@ import styles from './style.pcss'
 
 const { NavbarItem } = Navbar
 
-const stories = storiesOf('导航栏 Navbar', module)
+const stories = storiesOf('组件 / 导航栏 Navbar', module)
 
 stories.addDecorator(withKnobs)
 

@@ -10,7 +10,7 @@ import { Tag } from '../../../../dist/soui'
 
 import styles from './style.pcss'
 
-const stories = storiesOf('标签 Tag', module)
+const stories = storiesOf('组件 / 标签 Tag', module)
 
 stories.addDecorator(withKnobs)
 
