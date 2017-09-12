@@ -14,6 +14,7 @@ function loadStories () {
   require('./stories/ui/notice')
   require('./stories/ui/panel')
   require('./stories/ui/tag')
+  require('./stories/ui/throttle')
 }
 
 configure(loadStories, module)
