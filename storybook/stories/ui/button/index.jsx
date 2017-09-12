@@ -21,13 +21,13 @@ stories.add('基础', withInfo()(() => {
     disabled: boolean('disabled'),
     children: text('children', '点击'),
   }
-  return (<div className={cx(styles.view, styles.phone)}>
+  return (<div className={styles.phone}>
     <Button {...props}  onClick={action(`clicked: ${JSON.stringify(props)}`)}/>
   </div>)
 }))
 
 stories.add('所有按钮', () => {
-  return (<div className={styles.view}>
+  return (<div className={styles.phone}>
     {_.values(Button.SIZE).map((size) => {
       return _.values(Button.TYPE).map((type) => {
         return (<p><Button {...{ type, size }} onClick={action(`[clicked] size: ${size}, type: ${type}`)}>Click me</Button></p>)
