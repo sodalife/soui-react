@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
+import cx from 'classnames'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info'
@@ -19,7 +20,7 @@ stories.add('基础', withInfo()(() => {
     placeholder: text('placeholder', 'https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal'),
     error: text('error', 'https://imgplaceholder.com/320x200/cccccc/757575/fa-bug'),
   }
-  return (<div className={styles.view}>
-    <p><Image {...props}/></p>
+  return (<div className={cx(styles.phone, styles.center)}>
+   <Image {...props}/>
   </div>)
 }))

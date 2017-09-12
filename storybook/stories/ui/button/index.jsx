@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
+import cx from 'classnames'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info'
@@ -20,8 +21,8 @@ stories.add('基础', withInfo()(() => {
     disabled: boolean('disabled'),
     children: text('children', '点击'),
   }
-  return (<div className={styles.view}>
-    <p><Button {...props}  onClick={action(`clicked: ${JSON.stringify(props)}`)}/></p>
+  return (<div className={cx(styles.view, styles.phone)}>
+    <Button {...props}  onClick={action(`clicked: ${JSON.stringify(props)}`)}/>
   </div>)
 }))
 
