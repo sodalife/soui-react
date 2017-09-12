@@ -1,0 +1,71 @@
+.navbar {
+  width: 100%;
+  height: calc(50px + 1px);
+  position: relative;
+  background-color: transparent;
+  .bar {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid rgb(228,228,228);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+  .item {
+    position: relative;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    .icon {
+      font-size: 24px;
+      color: #333;
+    }
+    .title {
+      text-align: center;
+      font-size: 10px;
+      color: #666;
+    }
+    &.scan {
+      width: 65px;
+      height: 100%;
+      .button {
+        justify-content: center;
+        background-image: url('./assets/scan-bg.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        .icon {
+          font-size: 52px;
+          color: #65d065;
+          &:active {
+            color: #57bc57;
+          }
+        }
+      }
+    }
+    &.active {
+      .title {
+        color: #00ac1c;
+      }
+    }
+  }
+  .new {
+    position: absolute;
+    top: -8px;
+    right: 19px;
+    color: #fb3937;
+  }
+}
