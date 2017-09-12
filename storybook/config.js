@@ -13,6 +13,7 @@ function loadStories () {
   require('./stories/ui/list')
   require('./stories/ui/notice')
   require('./stories/ui/panel')
+  require('./stories/ui/tag')
 }
 
 configure(loadStories, module)
