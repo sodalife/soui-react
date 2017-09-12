@@ -28,7 +28,7 @@ stories.add('基础', withInfo()(() => {
     children: text('children', '内容'),
     brief: text('ListBrief', '摘要'),
   }
-  return (<div className={styles.phone}>
+  return (<div className={cx(styles.phone, styles.view)}>
     <h3>ListTitle</h3>
     <List className={styles.list}>
       <ListTitle onClick={action('click')} {...props}>
@@ -59,7 +59,7 @@ stories.add('基础', withInfo()(() => {
 }))
 
 stories.add('所有列表', withInfo()(() => {
-  return (<div className={styles.phone}>
+  return (<div className={cx(styles.phone, styles.view)}>
     <h3>列表标题</h3>
     <List className={styles.list}>
       <ListTitle>列表标题</ListTitle>

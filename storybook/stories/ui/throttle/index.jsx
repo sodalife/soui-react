@@ -30,7 +30,7 @@ stories.add('基础', withInfo()(() => {
   </div>)
 }))
 
-stories.add('完整示例', withInfo()(() => {
+stories.add('完整示例', () => {
   class Story extends Component {
     constructor () {
       super()
@@ -53,4 +53,4 @@ stories.add('完整示例', withInfo()(() => {
   }
 
   return <Story />
-}))
+})
