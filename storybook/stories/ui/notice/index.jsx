@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 import { Notice } from '../../../../dist/soui'
 

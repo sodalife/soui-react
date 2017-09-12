@@ -12,6 +12,7 @@ function loadStories () {
   require('./stories/ui/image')
   require('./stories/ui/list')
   require('./stories/ui/notice')
+  require('./stories/ui/panel')
 }
 
 configure(loadStories, module)
