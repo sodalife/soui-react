@@ -15,6 +15,7 @@ function loadStories () {
   require('./stories/ui/panel')
   require('./stories/ui/tag')
   require('./stories/ui/throttle')
+  require('./stories/ui/jumbotron')
 }
 
 configure(loadStories, module)
