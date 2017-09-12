@@ -28,7 +28,7 @@ stories.add('基础', withInfo()(() => {
   </div>)
 }))
 
-stories.add('组合使用', withInfo()(() => {
+stories.add('组合使用', () => {
   class Story extends Component {
     constructor () {
       super()
@@ -55,4 +55,4 @@ stories.add('组合使用', withInfo()(() => {
     }
   }
   return <Story />
-}))
+})
