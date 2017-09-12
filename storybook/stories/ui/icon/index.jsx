@@ -32,7 +32,7 @@ stories.addDecorator(withKnobs)
 
 stories.add('基础', withInfo()(() => {
   let type = select('type', Icon.TYPE, 'coding')
-  return (<div className={cx(styles.view, styles.center)}>
+  return (<div className={cx(styles.view, styles.phone, styles.center)}>
     <Icon className={styles.icon} type={type} style={{ color: color('style.color', '#666'), fontSize: number('style.fontSize', 160) }} />
   </div>)
 }))
