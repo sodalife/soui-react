@@ -20,6 +20,7 @@ function loadStories () {
   require('./stories/components/navbar')
 
   require('./stories/helpers/throttle')
+  require('./stories/helpers/clearfix')
 }
 
 configure(loadStories, module)
