@@ -23,7 +23,7 @@ stories.add('基础', withInfo()(() => {
   return (<div className={cx(styles.phone, styles.view)}>
     <Jumbotron className={styles.jumbotron}>
       <h3>欢迎回来</h3>
-      <JumbotronButton size={props.size}>小按钮</JumbotronButton>
+      <JumbotronButton size={props.size}>按钮</JumbotronButton>
     </Jumbotron>
   </div>)
 }))
