@@ -11,4 +11,5 @@ export { default as Jumbotron } from './components/jumbotron/index.jsx'
 export { default as Navbar } from './components/navbar/index.jsx'
 
 export { default as Throttle } from './helpers/throttle/index.jsx'
+export { default as Fastscroll } from './helpers/fastscroll/index.jsx'
 export { default as Clearfix } from './helpers/clearfix/index.jsx'
