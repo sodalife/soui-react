@@ -5,23 +5,16 @@ import cx from 'classnames'
 import Icon from '../../basics/icon/index.jsx'
 
 import styles from './style.pcss'
-import transition from './transition.pcss'
-
-import Animate from 'rc-animate'
 
 class Navbar extends Component {
   render() {
     const { children } = this.props
     return (
-      <Animate
-        transitionName={transition}
-        transitionAppear>
-        <footer className={styles.navbar}>
-          <nav className={styles.bar}>
-            { children }
-          </nav>
-        </footer>
-      </Animate>
+      <footer className={styles.navbar}>
+        <nav className={styles.bar}>
+          { children }
+        </nav>
+      </footer>
     )
   }
 }
