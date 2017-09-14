@@ -1,0 +1,48 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal {
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 50px;
+    min-width: 250px;
+    max-width: 78%;
+    background: #fff;
+    overflow: hidden;
+    .title {
+      margin: 0 0 10px;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 20px;
+      font-weight: normal;
+      color: #333;
+    }
+    .content {
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 1.5em;
+      color: #666;
+    }
+    .footer {
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .button {
+        width: 100%;
+        flex: 1;
+        &.cancel {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

@@ -19,6 +19,8 @@ function loadStories () {
   require('./stories/components/jumbotron')
   require('./stories/components/navbar')
 
+  require('./stories/dialogs/dialog')
+
   require('./stories/helpers/throttle')
   require('./stories/helpers/fastscroll')
   require('./stories/helpers/clearfix')
