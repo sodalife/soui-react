@@ -11,6 +11,7 @@ export { default as Jumbotron } from './components/jumbotron/index.jsx'
 export { default as Navbar } from './components/navbar/index.jsx'
 
 export { default as Dialog } from './dialogs/dialog/index.jsx'
+export { default as Alert } from './dialogs/alert/index.jsx'
 
 export { default as Throttle } from './helpers/throttle/index.jsx'
 export { default as Fastscroll } from './helpers/fastscroll/index.jsx'

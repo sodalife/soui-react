@@ -20,6 +20,7 @@ function loadStories () {
   require('./stories/components/navbar')
 
   require('./stories/dialogs/dialog')
+  require('./stories/dialogs/alert')
 
   require('./stories/helpers/throttle')
   require('./stories/helpers/fastscroll')
