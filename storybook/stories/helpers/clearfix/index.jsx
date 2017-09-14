@@ -16,11 +16,11 @@ stories.addDecorator(withKnobs)
 
 stories.add('基础', withInfo()(() => {
   return (<div className={styles.phone}>
-    <div className={styles.left} />
+    <div className={styles.box} style={{ float: "left" }} />
     <Clearfix />
-    <div className={styles.left} />
-    <div className={styles.left} />
+    <div className={styles.box} style={{ float: "left" }} />
+    <div className={styles.box} style={{ float: "left" }} />
     <Clearfix />
-    <div className={styles.left} />
+    <div className={styles.box} style={{ float: "left" }} />
   </div>)
 }))
