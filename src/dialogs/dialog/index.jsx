@@ -40,7 +40,7 @@ class Dialog extends Component {
         {
           visible ?
             <div className={cx(styles.container, { [`${styles.visible}`]: visible })}>
-              <div className={styles.modal}>
+              <div className={styles.dialog}>
                 <h3 className={styles.title}>{ title }</h3>
                 <div className={styles.content}>
                   {children}
