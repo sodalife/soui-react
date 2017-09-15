@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from '../../basics/button/index.jsx'
-import Dialog from '../dialog/index.jsx'
+import Button from '../../../basics/button/index.jsx'
+import Dialog from '../../dialog/index.jsx'
 
 import styles from './style.pcss'
 
@@ -25,31 +25,22 @@ class Alert extends Component {
 
   static defaultProps = {
     title: '提示',
+    visible: false,
     onClosed: function () {},
     onOk: function () {},
     okText: '确认',
   }
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      visible: true,
-    }
-  }
-
-  handleClickOk () {
-    this.setState({
-      visible: false,
-    })
+  handleClickOk (e) {
+    return this.props.onOk(e)
   }
 
   render () {
-    let { message, okText, okDisabled, ...props } = this.props
+    let { message, okText, okDisabled } = this.props
     let footer = (
       <Button type="primary" className={styles.button} onClick={this.handleClickOk.bind(this)} disabled={okDisabled}>{okText}</Button>
     )
-    let visible = typeof this.props.visible !== 'undefined' ? this.props.visible : this.state.visible
-    return (<Dialog footer={footer} visible={visible} {..._.omit(props, 'footer', 'visible', 'children')}>
+    return (<Dialog footer={footer} {..._.pick(this.props, 'title', 'onClosed', 'visible')}>
       { message }
     </Dialog>)
   }
