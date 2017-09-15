@@ -12,6 +12,7 @@ export { default as Navbar } from './components/navbar/index.jsx'
 
 export { default as Dialog } from './dialogs/dialog/index.jsx'
 export { default as Alert, alert } from './dialogs/modals/alert/index.jsx'
+export { default as Confirm, confirm } from './dialogs/modals/confirm/index.jsx'
 
 export { default as Throttle } from './helpers/throttle/index.jsx'
 export { default as Fastscroll } from './helpers/fastscroll/index.jsx'
