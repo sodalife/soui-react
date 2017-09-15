@@ -5,6 +5,7 @@ import cx from 'classnames'
 
 import Button from '../../../basics/button/index.jsx'
 import Dialog from '../../dialog/index.jsx'
+import ghostify from '../ghostify/index.jsx'
 
 import styles from './style.pcss'
 
@@ -47,3 +48,5 @@ class Alert extends Component {
 }
 
 export default Alert
+
+export const alert = ghostify(Alert)
