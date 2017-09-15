@@ -31,7 +31,7 @@ class Alert extends Component {
   render () {
     let { message, okText, okDisabled } = this.props
     let footer = (
-      <Button type="primary" className={styles.button} onClick={this.onOk} disabled={okDisabled}>{okText}</Button>
+      <Button type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>
     )
     return (<Dialog footer={footer} {..._.pick(this.props, 'title', 'onClosed', 'visible')}>
       { message }
