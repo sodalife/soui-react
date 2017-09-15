@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
-import { Alert, alert, Button } from '../../../../dist/soui'
+import { Alert, alert, Button } from '../../../../../dist/soui'
 
 import styles from './style.pcss'
 

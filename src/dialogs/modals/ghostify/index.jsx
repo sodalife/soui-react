@@ -16,14 +16,23 @@ function ghostify (Spirit) {
           }
         }
 
+        componentDidMount () {
+          this._isMounted = true
+        }
+        componentWillUnmount () {
+          this._isMounted = false
+        }
+
         handleOk (...args) {
           let promise = Promise.resolve()
           if (typeof props.onOk === 'function') {
             promise = promise.then(() => props.onOk(...args))
           }
           promise.then(() => {
-            this.setState({ visible: false })
-            resolve(...args)
+            if (this._isMounted) {
+              this.setState({ visible: false })
+              resolve(...args)
+            }
           })
         }
 
@@ -33,8 +42,10 @@ function ghostify (Spirit) {
             promise = promise.then(() => props.onCancel())
           }
           promise.then(() => {
-            this.setState({ visible: false })
-            reject(new Error('cancelled'))
+            if (this._isMounted) {
+              this.setState({ visible: false })
+              reject(new Error('cancelled'))
+            }
           })
         }
 

@@ -20,7 +20,8 @@ function loadStories () {
   require('./stories/components/navbar')
 
   require('./stories/dialogs/dialog')
-  require('./stories/dialogs/alert')
+  require('./stories/dialogs/modals/alert')
+  require('./stories/dialogs/modals/confirm')
 
   require('./stories/helpers/throttle')
   require('./stories/helpers/fastscroll')

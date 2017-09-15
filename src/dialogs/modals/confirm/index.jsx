@@ -9,7 +9,7 @@ import ghostify from '../ghostify/index.jsx'
 
 import styles from './style.pcss'
 
-class Alert extends Component {
+class Confirm extends Component {
   static propTypes = {
     title: PropTypes.string,
     visible: PropTypes.bool,
@@ -18,6 +18,9 @@ class Alert extends Component {
     onOk: PropTypes.func,
     okText: PropTypes.string,
     okDisabled: PropTypes.bool,
+    onCancel: PropTypes.func,
+    cancelText: PropTypes.string,
+    cancelDisabled: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -26,19 +29,22 @@ class Alert extends Component {
     onClosed: function () {},
     onOk: function () {},
     okText: '确认',
+    onCancel: function () {},
+    cancelText: '取消',
   }
 
   render () {
-    let { message, okText, okDisabled } = this.props
-    let footer = (
-      <Button type="primary" className={styles.button} onClick={this.onOk} disabled={okDisabled}>{okText}</Button>
-    )
+    let { message, okText, okDisabled, cancelText, cancelDisabled } = this.props
+    let footer = [
+        <Button key="cancel" type="ghost" className={cx(styles.button, styles.cancel)} onClick={this.props.onCancel}>{cancelText}</Button>,
+        <Button key="ok" type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>,
+    ]
     return (<Dialog footer={footer} {..._.pick(this.props, 'title', 'onClosed', 'visible')}>
       { message }
     </Dialog>)
   }
 }
 
-export default Alert
+export default Confirm
 
-export const alert = ghostify(Alert)
+export const confirm = ghostify(Confirm)
