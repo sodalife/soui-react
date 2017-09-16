@@ -24,14 +24,14 @@ function ghostify (Spirit) {
         }
 
         handleOk (...args) {
-          let promise = Promise.resolve()
+          let promise = Promise.resolve(...args)
           if (typeof props.onOk === 'function') {
             promise = promise.then(() => props.onOk(...args))
           }
-          promise.then(() => {
+          promise.then((data) => {
             if (this._isMounted) {
               this.setState({ visible: false })
-              resolve(...args)
+              resolve(data)
             }
           })
         }
