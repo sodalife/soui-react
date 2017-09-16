@@ -23,6 +23,8 @@ stories.add('基础', withInfo()(() => {
     onOk: action('ok'),
     okText: text('okText', 'OK'),
     okDisabled: boolean('okDisabled', false),
+    placeholder: text('placeholder', 'placeholder'),
+    initialValue: text('initialValue', 'initialValue'),
   }
 
   return (<div className={styles.phone}>
@@ -36,9 +38,11 @@ stories.add('幽灵模式', withInfo()(() => {
     message: text('message', '内容'),
     okText: text('okText', 'OK'),
     okDisabled: boolean('okDisabled', false),
+    placeholder: text('placeholder', 'placeholder'),
+    initialValue: text('initialValue', 'initialValue'),
   }
   return (<div className={styles.phone}>
-    <Button onClick={() => prompt(props)} type="ghost">确认</Button>
+    <Button onClick={() => prompt(props).then((result) => alert(result))} type="ghost">确认</Button>
   </div>)
 }))
 
