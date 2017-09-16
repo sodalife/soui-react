@@ -23,6 +23,7 @@ function loadStories () {
   require('./stories/dialogs/dialog')
   require('./stories/dialogs/modals/alert')
   require('./stories/dialogs/modals/confirm')
+  require('./stories/dialogs/modals/prompt')
 
   require('./stories/helpers/throttle')
   require('./stories/helpers/fastscroll')
