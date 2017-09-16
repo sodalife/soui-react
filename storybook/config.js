@@ -18,6 +18,7 @@ function loadStories () {
   require('./stories/components/tag')
   require('./stories/components/jumbotron')
   require('./stories/components/navbar')
+  require('./stories/components/input')
 
   require('./stories/dialogs/dialog')
   require('./stories/dialogs/modals/alert')
