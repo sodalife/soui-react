@@ -1,0 +1,50 @@
+$height: 48px;
+
+.field {
+  display: flex;
+  width: 100%;
+  height: $height;
+  line-height: $height;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: all 200ms ease;
+  &.focus {
+    border: 1px solid #0bbe06;
+  }
+  &.error {
+    border: 1px solid #ff4e4e;
+  }
+  .input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 100%;
+    line-height: 2em;
+    background: none;
+    border: none;
+    appearance: none;
+    outline: none;
+  }
+  .icon, .addon {
+    padding: 0 14px;
+  }
+  .icon {
+    color: #666;
+  }
+  .addon {
+    color: #e5e5e5;
+    display: flex;
+  }
+  .addonActive {
+    color: #0bbe06;
+  }
+  .addonHide {
+    opacity: 0;
+  }
+}

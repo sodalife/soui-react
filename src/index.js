@@ -9,6 +9,7 @@ export { default as Panel } from './components/panel/index.jsx'
 export { default as Tag } from './components/tag/index.jsx'
 export { default as Jumbotron } from './components/jumbotron/index.jsx'
 export { default as Navbar } from './components/navbar/index.jsx'
+export { default as Input } from './components/input/index.jsx'
 
 export { default as Dialog } from './dialogs/dialog/index.jsx'
 export { default as Alert, alert } from './dialogs/modals/alert/index.jsx'
