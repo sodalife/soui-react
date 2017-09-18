@@ -19,10 +19,13 @@ stories.add('基础', withInfo()(() => {
     title: text('title', '标题'),
     visible: boolean('visible', true),
     onClosed: action('closed'),
-    message: text('message', '内容'),
+    message: text('message', '消息'),
     onOk: action('ok'),
-    okText: text('okText', 'OK'),
+    okText: text('okText', '确认'),
     okDisabled: boolean('okDisabled', false),
+    onCancel: action('cancel'),
+    cancelText: text('cancelText', '取消'),
+    cancelDisabled: boolean('cancelDisabled', false),
   }
 
   return (<div className={styles.phone}>
@@ -33,9 +36,11 @@ stories.add('基础', withInfo()(() => {
 stories.add('幽灵模式', withInfo()(() => {
   let props = {
     title: text('title', '标题'),
-    message: text('message', '内容'),
-    okText: text('okText', 'OK'),
+    message: text('message', '消息'),
+    okText: text('okText', '确认'),
     okDisabled: boolean('okDisabled', false),
+    cancelText: text('cancelText', '取消'),
+    cancelDisabled: boolean('cancelDisabled', false),
   }
   return (<div className={styles.phone}>
     <Button onClick={() => confirm(props)} type="ghost">确认</Button>
