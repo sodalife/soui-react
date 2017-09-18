@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Button from '../../../basics/button/index.jsx'
+import Input from '../../../components/input/index.jsx'
 import Dialog from '../../dialog/index.jsx'
 import ghostify from '../ghostify/index.jsx'
 
@@ -65,8 +66,8 @@ class Prompt extends Component {
         <Button key="ok" type="primary" className={styles.button} onClick={this.handleFormSubmit.bind(this)} disabled={okDisabled}>{okText}</Button>,
     ]
     return (<Dialog footer={footer} {..._.pick(this.props, 'title', 'onClosed', 'visible')}>
-      <form className={styles.input} onSubmit={this.handleFormSubmit.bind(this)}>
-        <input placeholder={placeholder} defaultValue={initialValue} onChange={this.handleInputChange.bind(this)} ref="input" />
+      <form onSubmit={this.handleFormSubmit.bind(this)}>
+        <Input placeholder={placeholder} defaultValue={initialValue} onChange={this.handleInputChange.bind(this)} ref="input" />
       </form>
       <div className={styles.message}>
         { message }
