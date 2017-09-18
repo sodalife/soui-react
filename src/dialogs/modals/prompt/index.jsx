@@ -54,14 +54,14 @@ class Prompt extends Component {
   }
 
   handleFormSubmit (e) {
-    // e.preventDefault()
+    e.preventDefault()
     this.props.onOk(this.state.value)
   }
 
   render () {
     let { message, okText, okDisabled, cancelText, cancelDisabled, placeholder, initialValue } = this.props
     let footer = [
-        <Button key="cancel" type="ghost" className={cx(styles.button, styles.cancel)} onClick={this.props.onCancel}>{cancelText}</Button>,
+        <Button key="cancel" type="ghost" className={cx(styles.button, styles.cancel)} onClick={this.props.onCancel} disabled={cancelDisabled}>{cancelText}</Button>,
         <Button key="ok" type="primary" className={styles.button} onClick={this.handleFormSubmit.bind(this)} disabled={okDisabled}>{okText}</Button>,
     ]
     return (<Dialog footer={footer} {..._.pick(this.props, 'title', 'onClosed', 'visible')}>

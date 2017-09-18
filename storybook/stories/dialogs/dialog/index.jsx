@@ -41,11 +41,11 @@ stories.add('控制显隐', () => {
         <Dialog
           title="SouI"
           visible={this.state.show}
-          footer={<Button size="block" onClick={() => { this.setState({ show: false })}}>Hide</Button>}
+          footer={<a href="javascript: void 0;"  onClick={() => { this.setState({ show: false })}}>Close</a>}
           >
           Hello world
         </Dialog>
-        <Button onClick={() => { this.setState({ show: true })}}>Show</Button>
+        <Button onClick={() => { this.setState({ show: true })}}>Show me</Button>
       </div>)
     }
   }
