@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "is-promise": "^2.1.0",
     "keymirror": "^0.1.1",
     "prop-types": "^15.5.10",
     "rc-animate": "^2.4.1",

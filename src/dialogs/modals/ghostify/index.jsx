@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import isPromise from 'is-promise'
 import { Container } from './container'
 
 function ghostify (Spirit) {
