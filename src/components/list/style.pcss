@@ -1,3 +1,5 @@
+@import '../../theme/variables.pcss';
+
 @define-mixin row {
   display: block;
   padding-left: 18px;
@@ -81,7 +83,7 @@
         }
         .checked {
           display: block;
-          color: #65d065;
+          color: $theme-color-primary;
           font-size: 22px;
         }
       }
@@ -119,7 +121,7 @@
     .container {
       padding: 8px 18px;
       justify-content: center;
-      color: #65d065;
+      color: $theme-color-primary;
     }
     &:active {
       background-color: #efefef;

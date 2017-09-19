@@ -1,6 +1,12 @@
+@import '../../theme/variables.pcss';
+
 .jumbotron {
   height: 206px;
-  background-image: linear-gradient(0, rgb(0,208,173), rgb(92,213,136));
+  background-image: linear-gradient(
+    0,
+    color($theme-color-jumbotron h(+ 12%) s(+ 23%) l(- 10%)),
+    color($theme-color-jumbotron h(- 16%) s(+ 2%) l(+ 9%))
+    );
 }
 
 .button {

@@ -1,3 +1,5 @@
+@import '../../theme/variables.pcss';
+
 $height: 48px;
 $padding: 14px;
 
@@ -18,10 +20,10 @@ $padding: 14px;
   overflow: hidden;
   transition: all 200ms ease;
   &.focus {
-    border: 1px solid #0bbe06;
+    border: 1px solid $theme-color-primary;
   }
   &.error {
-    border: 1px solid #ff4e4e;
+    border: 1px solid $theme-color-danger;
   }
   .input {
     flex-grow: 1;
@@ -44,7 +46,7 @@ $padding: 14px;
     padding-left: $padding;
   }
   .addonActive {
-    color: #0bbe06;
+    color: $theme-color-primary;
   }
   .addonHide {
     opacity: 0;
