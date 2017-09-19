@@ -1,3 +1,5 @@
+@import '../../theme/variables.pcss';
+
 .button {
   display: flex;
   align-items: center;
@@ -30,41 +32,41 @@
    */
   &.default {
     background-color: #fff;
-    border: 1px solid #65d065;
-    color: #65d065;
+    border: 1px solid $theme-color-primary;
+    color: $theme-color-primary;
     &:active {
-      background-color: #f0fff0;
-      color: #a3e3a3;
+      background-color: color($theme-color-primary saturation(100%) lightness(97%));
+      color: color($theme-color-primary lightness(+ 15%));
     }
   }
   &.primary {
-    background-color: #65d065;
-    border: 1px solid #65d065;
+    background-color: $theme-color-primary;
+    border: 1px solid $theme-color-primary;
     color: #fff;
     &:active {
-      background-color: #57bc57;
-      color: #90e490;
+      background-color: color($theme-color-primary shade(10%));
+      color: color($theme-color-primary tint(30%));
     }
   }
   &.ghost {
     background-color: #fff;
-    border: 1px solid #cecece;
-    color: #666;
+    border: 1px solid color($theme-color-secondary lightness(* 2));
+    color: $theme-color-secondary;
     &:active {
-      background-color: #f0fff0;
-      border: 1px solid #65d065;
-      color: #666;
+      background-color: color($theme-color-primary saturation(100%) lightness(97%));
+      border: 1px solid $theme-color-primary;
+      color: $theme-color-secondary;
     }
   }
 
   &:disabled {
-    background-color: #ebebeb;
-    border: 1px solid #ebebeb;
-    color: #c2c2c2;
+    background-color: $theme-color-disabled;
+    border: 1px solid $theme-color-disabled;
+    color: color($theme-color-disabled shade(18%));
     &:active {
-      background-color: #ebebeb;
-      border: 1px solid #ebebeb;
-      color: #c2c2c2;
+      background-color: $theme-color-disabled;
+      border: 1px solid $theme-color-disabled;
+      color: color($theme-color-disabled shade(18%));
     }
   }
 
