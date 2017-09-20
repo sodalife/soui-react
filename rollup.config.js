@@ -8,7 +8,8 @@ export default {
   input: 'src/index.js',
   output: {
     file: 'dist/soui.js',
-    format: 'cjs',
+    format: 'umd',
+    name: 'soui',
   },
   plugins: [
     postcss({
