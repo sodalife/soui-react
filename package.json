@@ -15,6 +15,7 @@
   "scripts": {
     "clean": "rm -rf ./dist ./storybook-static",
     "build": "rollup -c",
+    "build:standalone": "webpack --config webpack.conf.prod.js",
     "storybook": "start-storybook -p 9001 -c storybook",
     "build-storybook": "npm run build && build-storybook -c storybook",
     "gh-pages": "npm run build-storybook && cp .gitlab-ci.yml ./storybook-static && gh-pages -d storybook-static --dotfiles"
@@ -63,7 +64,8 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-postcss": "^0.5.5",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.6",
+    "unminified-webpack-plugin": "^1.2.0",
+    "webpack": "^3.6.0",
     "webpack-merge": "^4.1.0"
   }
 }
