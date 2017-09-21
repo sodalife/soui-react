@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>SouI for React</title>
+    <meta name="description" content="苏打 React UI 组件" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+
+
+	<!-- docsify box react -->
+  <script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
+  <script src="//unpkg.com/@sodalife/soui-react@0.2.2/dist/soui.standalone.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="//unpkg.com/docsify-demo-box-react@1.0.0/dist/docsify-demo-box-react.min.js"></script>
+
+  <!-- config -->
+  <script>
+    window.$docsify = {
+      name: 'SouI for React',
+      loadSidebar: true,
+      mergeNavbar: true,
+      subMaxLevel: 4,
+      auto2top: true,
+      markdown: {
+        gfm: true,
+        tables: true,
+      },
+      plugins: [
+        (function () {
+          var jsResources = [
+            '//cdn.bootcss.com/react/15.6.1/react.js',
+            '//cdn.bootcss.com/react/15.6.1/react-dom.js',
+            '//unpkg.com/@sodalife/soui-react@0.2.2/dist/soui.standalone.js',
+          ].map(function (url) {
+            return '<script src="' + url + '"><' + '/script>'
+          }).join('\n')
+          return DemoBoxReact.create(jsResources)
+        })()
+      ],
+    }
+  </script>
+
+  <!-- docsify -->
+   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+  <!-- plugins -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- language highlight -->
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-jsx.min.js"></script>
+
+</html>
