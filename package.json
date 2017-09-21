@@ -19,7 +19,7 @@
     "build:umd": "rollup -c",
     "build:standalone": "webpack --config webpack.conf.prod.js",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "build-storybook": "npm run build && build-storybook -c storybook",
+    "build-storybook": "npm run build:umd && build-storybook -c storybook",
     "gh-pages": "npm run build-storybook && cp .gitlab-ci.yml ./storybook-static && gh-pages -d storybook-static --dotfiles"
   },
   "peerDependencies": {
