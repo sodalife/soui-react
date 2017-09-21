@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import omit from 'lodash-es/omit'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -52,7 +52,7 @@ class Tag extends Component {
     let { selected } = this.state
     return (<div className={cx(styles.tag, {
         [styles.selected]: selected
-      }, className)} onClick={this.handleClick.bind(this)} {..._.omit(this.props, 'className', 'selected', 'onClick')}/>)
+      }, className)} onClick={this.handleClick.bind(this)} {...omit(this.props, 'className', 'selected', 'onClick')}/>)
   }
 }
 

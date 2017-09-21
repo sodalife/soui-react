@@ -20,6 +20,7 @@ module.exports = merge(base, {
   externals: ['react', 'react-dom'],
   plugins: [
     new ProgressBarPlugin(),
+    new LodashModuleReplacementPlugin,
     new webpack.DefinePlugin({
       'process.env': {
           NODE_ENV: 'production',

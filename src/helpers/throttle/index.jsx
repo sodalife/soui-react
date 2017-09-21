@@ -1,4 +1,5 @@
-import _ from 'underscore'
+import omit from 'lodash-es/omit'
+import keys from 'lodash-es/keys'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -75,7 +76,7 @@ class Throttle extends Component {
       children = typeof waitText === 'function' ? waitText({ countdown }) : waitText
     }
     return <span
-      {..._.omit(this.props, _.keys(Throttle.propTypes))}
+      {...omit(this.props, keys(Throttle.propTypes))}
       className={cx(styles.throttle, { [`${styles.disabled}`]: disabled || (countdown > 0) }, className)}
       onClick={this.handleClick.bind(this)}
     >

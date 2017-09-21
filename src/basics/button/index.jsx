@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import values from 'lodash-es/values'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -29,8 +29,8 @@ Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   onClick: PropTypes.func,
-  type: PropTypes.oneOf(_.values(Button.TYPE)),
-  size: PropTypes.oneOf(_.values(Button.SIZE)),
+  type: PropTypes.oneOf(values(Button.TYPE)),
+  size: PropTypes.oneOf(values(Button.SIZE)),
   disabled: PropTypes.bool,
 }
 
