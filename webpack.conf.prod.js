@@ -17,7 +17,10 @@ module.exports = merge(base, {
     library: 'soui',
     libraryTarget: 'umd',
   },
-  externals: ['react', 'react-dom'],
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   plugins: [
     new ProgressBarPlugin(),
     new LodashModuleReplacementPlugin,
