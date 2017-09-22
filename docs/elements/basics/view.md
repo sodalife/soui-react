@@ -40,4 +40,4 @@ ReactDOM.render(<App />, document.body)
 
 
 ## 更多
-[Storybook - 基础元素 / 视图 View](https://sodalife.github.io/soui-react/?selectedKind=基础元素 / 视图 View)
+[Storybook - 基础元素 / 视图 View](./storybook/?selectedKind=基础元素 / 视图 View ":ignore")

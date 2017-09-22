@@ -14,13 +14,13 @@
   "author": "yelo",
   "license": "Apache-2.0",
   "scripts": {
-    "clean": "rm -rf ./dist ./storybook-static",
+    "clean": "rm -rf ./dist ./storybook-static ./docs/storybook",
     "build": "npm run build:umd && npm run build:standalone",
     "build:umd": "rollup -c",
     "build:standalone": "webpack --config webpack.conf.prod.js",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "build-storybook": "npm run build:umd && build-storybook -c storybook",
-    "gh-pages": "npm run build-storybook && cp .gitlab-ci.yml ./storybook-static && gh-pages -d storybook-static --dotfiles",
+    "build-storybook": "npm run build:umd && build-storybook -c storybook -o ./docs/storybook",
+    "gh-pages": "npm run build-storybook && cp .gitlab-ci.yml ./docs && gh-pages -d docs --dotfiles && rm ./docs/.gitlab-ci.yml",
     "prepublish": "npm run build"
   },
   "peerDependencies": {

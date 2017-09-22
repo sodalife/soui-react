@@ -39,4 +39,4 @@ export default class App extends React.Component {
 
 
 ## 更多
-[Storybook - 基础元素 / 按钮 Button](https://sodalife.github.io/soui-react/?selectedKind=基础元素 / 按钮 Button)
+[Storybook - 基础元素 / 按钮 Button](./storybook/?selectedKind=基础元素 / 按钮 Button ":ignore")

@@ -51,8 +51,8 @@ export default class App extends React.Component {
 
 
 ## 所有图标
-[Storybook - 基础元素 / 图标 Icon - 全部图标](https://sodalife.github.io/soui-react/?selectedKind=基础元素 / 图标 Icon&selectedStory=全部图标)
+[Storybook - 基础元素 / 图标 Icon - 全部图标](./storybook/?selectedKind=基础元素 / 图标 Icon&selectedStory=全部图标 ":ignore")
 
 
 ## 更多
-[Storybook - 基础元素 / 图标 Icon](https://sodalife.github.io/soui-react/?selectedKind=基础元素 / 图标 Icon)
+[Storybook - 基础元素 / 图标 Icon](./storybook/?selectedKind=基础元素 / 图标 Icon ":ignore")

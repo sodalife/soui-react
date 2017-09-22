@@ -48,4 +48,4 @@ export default class App extends React.Component {
 
 
 ## 更多
-[Storybook - 基础元素 / 图片 Image](https://sodalife.github.io/soui-react/?selectedKind=基础元素 / 图片 Image)
+[Storybook - 基础元素 / 图片 Image](./storybook/?selectedKind=基础元素 / 图片 Image ":ignore")
