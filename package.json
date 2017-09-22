@@ -20,7 +20,7 @@
     "build:standalone": "webpack --config webpack.conf.prod.js",
     "storybook": "start-storybook -p 9001 -c storybook",
     "build-storybook": "npm run build:umd && build-storybook -c storybook -o ./docs/storybook",
-    "gh-pages": "npm run build-storybook && cp .gitlab-ci.yml ./docs && gh-pages -d docs --dotfiles && rm ./docs/.gitlab-ci.yml",
+    "gh-pages": "npm run build-storybook && gh-pages -d docs --dotfiles",
     "prepublish": "npm run build"
   },
   "peerDependencies": {
