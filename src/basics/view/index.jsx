@@ -27,12 +27,11 @@ class ViewMain extends React.Component {
   constructor (props) {
     super(props)
 
-    this.refs = {}
+    this.container = null
   }
 
   componentDidMount () {
-    let { container } = this.refs
-    this.releaseFocus = focus(container)
+    this.releaseFocus = focus(this.container)
   }
 
   componentWillUnmount () {
@@ -43,7 +42,7 @@ class ViewMain extends React.Component {
     let { className, ...props } = this.props
     return (<main
       className={cx(styles.main, className)}
-      ref={(container) => {this.refs.container = container}}
+      ref={(container) => {this.container = container}}
       {...props}
       />)
   }

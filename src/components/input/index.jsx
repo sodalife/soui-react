@@ -29,12 +29,12 @@ class Input extends Component {
     this.state = {
       focus: false,
     }
-    this.refs = {}
+    this.input = null
   }
 
   handleClickField () {
-    if (!this.state.focus) {
-      this.refs.input.focus()
+    if (!this.state.focus && this.input) {
+      this.input.focus()
     }
   }
 
@@ -69,7 +69,7 @@ class Input extends Component {
         className={styles.input}
         onFocus={this.handleFocus.bind(this)}
         onBlur={this.handleBlur.bind(this)}
-        ref={(input) => { this.refs.input = input }}
+        ref={(input) => this.input = input}
       />
       {addon ? <span className={styles.addon} onClick={onClickAddon}>
         {addon}
