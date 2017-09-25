@@ -6,7 +6,7 @@
 import { Throttle } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	constructor () {
+  constructor () {
     super()
     this.state = {}
   }
@@ -20,7 +20,7 @@ class App extends React.Component {
       >
       获取验证码
     </Throttle>
-	}
+  }
 }
 
 ReactDOM.render(<App />, document.body)

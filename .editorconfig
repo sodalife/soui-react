@@ -14,9 +14,6 @@ indent_size = 2
 [*.json]
 insert_final_newline = false
 
-[*.md]
-trim_trailing_whitespace = false
-
 [*.{pcss,css}]
 indent_style = space
 indent_size = 2
