@@ -27,19 +27,21 @@ ReactDOM.render(<App />, document.body)
 
 ## API
 ### List
-|   属性   | 说明 | 类型 | 默认值 |
-| -------- | ---- | ---- | ------ |
-| children | 内容 | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 内容                          | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 ### ListItem
-|   属性    |     说明     |  类型   | 默认值 |
-| --------- | ------------ | ------- | ------ |
-| children  | 内容         | node    | -      |
-| icon      | 图标名       | string  | -      |
-| thumbnail | 缩略图地址   | string  | -      |
-| arrow     | 是否显示箭头 | boolean | false  |
-| checked   | 是否被勾选   | boolean | false  |
-| extra     | 额外信息     | string  | -      |
+|   属性    |             说明              |  类型   | 默认值 |
+| --------- | ----------------------------- | ------- | ------ |
+| children  | 内容                          | node    | -      |
+| icon      | 图标名                        | string  | -      |
+| thumbnail | 缩略图地址                    | string  | -      |
+| arrow     | 是否显示箭头                  | boolean | false  |
+| checked   | 是否被勾选                    | boolean | false  |
+| extra     | 额外信息                      | string  | -      |
+| ...props  | 其余继承所有原生 div 标签属性 | -       | -      |
 
 ### ListSubItem
 |   属性   |            说明            | 类型 | 默认值 |
@@ -47,24 +49,28 @@ ReactDOM.render(<App />, document.body)
 | ...props | 其余继承所有 ListItem 属性 | -    | -      |
 
 ### ListTitle
-|   属性   | 说明 | 类型 | 默认值 |
-| -------- | ---- | ---- | ------ |
-| children | 内容 | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 内容                          | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 ### ListButton
-|   属性   | 说明 | 类型 | 默认值 |
-| -------- | ---- | ---- | ------ |
-| children | 内容 | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 内容                          | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 ### ListGroup
-|   属性   | 说明 | 类型 | 默认值 |
-| -------- | ---- | ---- | ------ |
-| children | 内容 | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 内容                          | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 ### ListBrief
-|   属性   | 说明 | 类型 | 默认值 |
-| -------- | ---- | ---- | ------ |
-| children | 内容 | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 内容                          | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 
 ## 实例演示
@@ -80,7 +86,7 @@ const style = {
 
 export default class App extends React.Component {
 	render () {
-		return <div style={{ background: '#fafafa', padding: 12, width: 320 }}>
+		return <div style={{ background: '#fafafa', padding: 12, width: 375 }}>
 			<List style={style}>
 				<ListTitle>列表标题</ListTitle>
 				<ListItem>

@@ -27,6 +27,7 @@ ReactDOM.render(<App />, document.body)
 | src         | 图片地址                                     | string | -      |
 | placeholder | 图片未设定或未加载完成时，代替展示的图片地址 | string | -      |
 | error       | 图片加载错误时，代替展示的图片地址           | string | -      |
+| ...props    | 其余继承所有原生 img 标签属性                | -      | -      |
 
 ## 实例演示
 ```jsx
