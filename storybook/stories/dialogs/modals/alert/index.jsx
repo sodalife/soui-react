@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean  } from '@storybook/addon-knobs'
 
 import { Alert, alert, Button } from '../../../../../dist/soui'
 
@@ -49,6 +49,24 @@ stories.add('幽灵模式 - 延迟关闭', withInfo()(() => {
         resolve()
       }, 1800)
     })
+  }
+  return (<div className={styles.phone}>
+    <Button onClick={() => alert({ message: 'message', onOk })} type="ghost">警报</Button>
+  </div>)
+}))
+
+stories.add('幽灵模式 - Promise 阻止确认', withInfo()(() => {
+  function onOk () {
+    return Promise.reject(new Error('block'))
+  }
+  return (<div className={styles.phone}>
+    <Button onClick={() => alert({ message: 'message', onOk })} type="ghost">警报</Button>
+  </div>)
+}))
+
+stories.add('幽灵模式 - 抛异常阻止确认', withInfo()(() => {
+  function onOk () {
+    throw new Error('block')
   }
   return (<div className={styles.phone}>
     <Button onClick={() => alert({ message: 'message', onOk })} type="ghost">警报</Button>

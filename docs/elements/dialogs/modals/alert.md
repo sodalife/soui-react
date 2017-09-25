@@ -34,7 +34,7 @@ ReactDOM.render(<App />, document.body)
 ### alert(props)
 |  props   |                                 说明                                  |
 | -------- | --------------------------------------------------------------------- |
-| onOk     | 当用户确认时调用。若返回为 Promise Reject 将阻止确认动作 |
+| onOk     | 当用户确认时调用。若返回为 Promise Reject 或抛出 Error 将阻止确认动作 |
 | ...props | 其余继承所有 ``Alert`` 的属性                                         |
 
 ``alert`` 方法将返回一个 promise 对象；默认在用户确认后 **resolve**。

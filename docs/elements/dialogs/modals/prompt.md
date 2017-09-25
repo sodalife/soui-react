@@ -46,8 +46,8 @@ ReactDOM.render(<App />, document.body)
 ### prompt(props)
 |  props   |                           说明                           |
 | -------- | -------------------------------------------------------- |
-| onOk     | 当用户确认时调用。若返回为 Promise Reject 将阻止提交动作 |
-| onCancel | 当用户取消时调用。若返回为 Promise Reject 将阻止取消动作 |
+| onOk     | 当用户确认时调用。若返回为 Promise Reject 或抛出 Error 将阻止提交动作 |
+| onCancel | 当用户取消时调用。若返回为 Promise Reject 或抛出 Error 将阻止取消动作 |
 | ...props | 其余继承所有 ``Prompt`` 的属性                           |
 
 ``prompt`` 方法将返回一个 promise 对象；默认在用户确认后 **resolve** 输入的字符串；在用户取消后 **reject** 一个 ``message = 'cancelled'`` 的 Error。

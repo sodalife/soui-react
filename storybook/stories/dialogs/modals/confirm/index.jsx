@@ -59,3 +59,21 @@ stories.add('幽灵模式 - 延迟关闭', withInfo()(() => {
     <Button onClick={() => confirm({ message: 'message', onOk, onCancel: onOk })} type="ghost">确认</Button>
   </div>)
 }))
+
+stories.add('幽灵模式 - Promise 阻止确认', withInfo()(() => {
+  function onOk () {
+    return Promise.reject(new Error('block'))
+  }
+  return (<div className={styles.phone}>
+    <Button onClick={() => confirm({ message: 'message', onOk, onCancel: onOk })} type="ghost">确认</Button>
+  </div>)
+}))
+
+stories.add('幽灵模式 - 抛异常阻止确认', withInfo()(() => {
+  function onOk () {
+    throw new Error('block')
+  }
+  return (<div className={styles.phone}>
+    <Button onClick={() => confirm({ message: 'message', onOk, onCancel: onOk })} type="ghost">确认</Button>
+  </div>)
+}))
