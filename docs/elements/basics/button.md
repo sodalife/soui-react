@@ -5,9 +5,9 @@
 import { Button } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	render () {
-		return <Button type="primary">确认</Button>
-	}
+  render () {
+    return <Button type="primary">确认</Button>
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -30,9 +30,9 @@ ReactDOM.render(<App />, document.body)
 const { Button } = soui
 
 export default class App extends React.Component {
-	render () {
-		return <Button type="primary" onClick={() => alert('好的')}>确认</Button>
-	}
+  render () {
+    return <Button type="primary" onClick={() => alert('好的')}>确认</Button>
+  }
 }
 </script>
 ```

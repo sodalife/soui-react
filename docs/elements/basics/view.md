@@ -14,13 +14,13 @@ import { View } from '@sodalife/soui-react'
 const { ViewMain } = View
 
 class App extends React.Component {
-	render () {
-		return <View>
-			<ViewMain>
-				Hi
-			</ViewMain>
-		</View>
-	}
+  render () {
+    return <View>
+      <ViewMain>
+        Hi
+      </ViewMain>
+    </View>
+  }
 }
 
 ReactDOM.render(<App />, document.body)

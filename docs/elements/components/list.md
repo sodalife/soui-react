@@ -6,19 +6,19 @@ import { List } from '@sodalife/soui-react'
 const { ListTitle, ListItem, ListSubItem, ListButton, ListGroup, ListBrief } = List 
 
 class App extends React.Component {
-	render () {
-		return <List>
-			<ListTitle>
-				列表标题
-			</ListTitle>
-			<ListItem icon="coding">
-				列表项 1
-			</ListItem>
-			<ListItem icon="coding">
-				列表项 2
-			</ListItem>
-		</List>
-	}
+  render () {
+    return <List>
+      <ListTitle>
+        列表标题
+      </ListTitle>
+      <ListItem icon="coding">
+        列表项 1
+      </ListItem>
+      <ListItem icon="coding">
+        列表项 2
+      </ListItem>
+    </List>
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -81,64 +81,64 @@ const { List } = soui
 const { ListTitle, ListItem, ListSubItem, ListButton, ListGroup, ListBrief } = List
 
 const style = {
-	marginBottom: 24
+  marginBottom: 24
 }
 
 export default class App extends React.Component {
-	render () {
-		return <div style={{ background: '#fafafa', padding: 12, width: 375 }}>
-			<List style={style}>
-				<ListTitle>列表标题</ListTitle>
-				<ListItem>
-					基础项
-				</ListItem>
-				<ListItem icon="coding">
-					含图标项
-				</ListItem>
-				<ListItem thumbnail="https://imgplaceholder.com/24x24">
-					含缩略图项
-				</ListItem>
-				<ListItem>
-					<span>含摘要项</span>
-					<ListBrief>摘要</ListBrief>
-				</ListItem>
-				<ListItem extra="附加内容">
-					含附加内容项
-				</ListItem>
-				<ListItem arrow={true}>
-					含箭头项
-				</ListItem>
-				<ListItem checked={true}>
-					含勾选项
-				</ListItem>
-				<ListItem thumbnail="https://imgplaceholder.com/24x24" icon="coding" extra="附加内容" arrow={true} checked={true}>
-					<span>技能全开项</span>
-					<ListBrief>摘要</ListBrief>
-				</ListItem>
-				<ListButton>按钮</ListButton>
-			</List>
+  render () {
+    return <div style={{ background: '#fafafa', padding: 12, width: 375 }}>
+      <List style={style}>
+        <ListTitle>列表标题</ListTitle>
+        <ListItem>
+          基础项
+        </ListItem>
+        <ListItem icon="coding">
+          含图标项
+        </ListItem>
+        <ListItem thumbnail="https://imgplaceholder.com/24x24">
+          含缩略图项
+        </ListItem>
+        <ListItem>
+          <span>含摘要项</span>
+          <ListBrief>摘要</ListBrief>
+        </ListItem>
+        <ListItem extra="附加内容">
+          含附加内容项
+        </ListItem>
+        <ListItem arrow={true}>
+          含箭头项
+        </ListItem>
+        <ListItem checked={true}>
+          含勾选项
+        </ListItem>
+        <ListItem thumbnail="https://imgplaceholder.com/24x24" icon="coding" extra="附加内容" arrow={true} checked={true}>
+          <span>技能全开项</span>
+          <ListBrief>摘要</ListBrief>
+        </ListItem>
+        <ListButton>按钮</ListButton>
+      </List>
 
-			<List style={style}>
-				<ListTitle>子列表</ListTitle>
-				<ListSubItem>
-					子项
-				</ListSubItem>
-				<ListSubItem thumbnail="https://imgplaceholder.com/24x24" icon="coding" extra="附加内容" arrow={true} checked={true}>
-					<span>技能全开项</span>
-					<ListBrief>摘要</ListBrief>
-				</ListSubItem>
-			</List>
+      <List style={style}>
+        <ListTitle>子列表</ListTitle>
+        <ListSubItem>
+          子项
+        </ListSubItem>
+        <ListSubItem thumbnail="https://imgplaceholder.com/24x24" icon="coding" extra="附加内容" arrow={true} checked={true}>
+          <span>技能全开项</span>
+          <ListBrief>摘要</ListBrief>
+        </ListSubItem>
+      </List>
 
-			<List style={style}>
-				<ListTitle>组合列表</ListTitle>
-				<ListGroup>
-					<ListItem>组合项 1</ListItem>
-					<ListItem>组合项 2</ListItem>
-					<ListItem>组合项 3</ListItem>
-				</ListGroup>
-			</List>
-		</div>
-	}
+      <List style={style}>
+        <ListTitle>组合列表</ListTitle>
+        <ListGroup>
+          <ListItem>组合项 1</ListItem>
+          <ListItem>组合项 2</ListItem>
+          <ListItem>组合项 3</ListItem>
+        </ListGroup>
+      </List>
+    </div>
+  }
 }
 </script>
 ```

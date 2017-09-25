@@ -7,13 +7,13 @@
 import { Image } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	render () {
-		return <Image 
-			src="https://unsplash.it/320/200/?random"
-			placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
-			error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
-		 />
-	}
+  render () {
+    return <Image 
+      src="https://unsplash.it/320/200/?random"
+      placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
+      error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
+     />
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -36,13 +36,13 @@ ReactDOM.render(<App />, document.body)
 const { Image } = soui
 
 export default class App extends React.Component {
-	render () {
-		return <Image 
-			src="https://unsplash.it/320/200/?random"
-			placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
-			error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
-		 />
-	}
+  render () {
+    return <Image 
+      src="https://unsplash.it/320/200/?random"
+      placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
+      error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
+     />
+  }
 }
 </script>
 ```

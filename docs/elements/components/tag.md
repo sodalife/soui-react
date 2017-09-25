@@ -44,7 +44,7 @@ export default class App extends React.Component {
           return <Tag
             selected={this.state.value === value}
             onClick={(selected) => this.setState({ value: selected ? value : null })}
-						style={{ width: 100, marginLeft: 12 }}
+            style={{ width: 100, marginLeft: 12 }}
             >
             {value}
           </Tag>

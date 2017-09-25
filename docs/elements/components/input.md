@@ -5,9 +5,9 @@
 import { Input } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	render () {
-		return <Input icon="user" placeholder="yourname" onChange={(e) => console.log(e.currentTarget.value)} />
-	}
+  render () {
+    return <Input icon="user" placeholder="yourname" onChange={(e) => console.log(e.currentTarget.value)} />
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -40,12 +40,12 @@ const { Input } = soui
 const { InputPassword } = Input
 
 export default class App extends React.Component {
-	render () {
-		return <div>
-			<Input icon="user" placeholder="your name" onChange={(e) => console.log(e.currentTarget.value)} />
-			<InputPassword icon="lock" placeholder="secret word" onChange={(e) => console.log(e.currentTarget.value)} />
-		</div>
-	}
+  render () {
+    return <div>
+      <Input icon="user" placeholder="your name" onChange={(e) => console.log(e.currentTarget.value)} />
+      <InputPassword icon="lock" placeholder="secret word" onChange={(e) => console.log(e.currentTarget.value)} />
+    </div>
+  }
 }
 </script>
 ```

@@ -6,12 +6,12 @@ import { Panel } from '@sodalife/soui-react'
 const { PanelItem } = Panel 
 
 class App extends React.Component {
-	render () {
-		return <Panel title="主标题" subtitle="副标题">
-			<PanelItem title="标题 1" description="描述 1" thumbnail="https://imgplaceholder.com/100x54" />
-			<PanelItem title="标题 2" description="描述 2" thumbnail="https://imgplaceholder.com/100x54" />
-		</Panel>
-	}
+  render () {
+    return <Panel title="主标题" subtitle="副标题">
+      <PanelItem title="标题 1" description="描述 1" thumbnail="https://imgplaceholder.com/100x54" />
+      <PanelItem title="标题 2" description="描述 2" thumbnail="https://imgplaceholder.com/100x54" />
+    </Panel>
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -43,14 +43,14 @@ const { Panel } = soui
 const { PanelItem } = Panel
 
 export default class App extends React.Component {
-	render () {
-		return <div style={{ background: '#fafafa', padding: 12, width: 375 }}>
-			<Panel title="主标题" subtitle="副标题">
-				<PanelItem title="标题 1" description="描述 1" thumbnail="https://imgplaceholder.com/100x54" />
-				<PanelItem title="标题 2" description="描述 2" thumbnail="https://imgplaceholder.com/100x54" />
-			</Panel>
-		</div>
-	}
+  render () {
+    return <div style={{ background: '#fafafa', padding: 12, width: 375 }}>
+      <Panel title="主标题" subtitle="副标题">
+        <PanelItem title="标题 1" description="描述 1" thumbnail="https://imgplaceholder.com/100x54" />
+        <PanelItem title="标题 2" description="描述 2" thumbnail="https://imgplaceholder.com/100x54" />
+      </Panel>
+    </div>
+  }
 }
 </script>
 ```
