@@ -15,8 +15,12 @@ import { Button } from '@sodalife/soui-react'
 ReactDOM.render(<Button>Hello Soda</Button>, document.getElementsByTagName('body')[0])
 ```
 
-## Storybook
-[https://sodalife.github.io/soui-react](https://sodalife.github.io/soui-react)
+## Links
+- [Documents](https://sodalife.github.io/soui-react)
+- [Storybook](https://sodalife.github.io/soui-react/storybook)
+
+## Projects using SouI
+- [Sodalife](https://m.sodalife.xyz/v1/?channel=github)
 
 ## License
 [Apache License 2.0](LICENSE)
