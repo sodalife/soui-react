@@ -8,6 +8,12 @@ class Fastscroll extends Component {
     onFastscroll: PropTypes.func,
   }
 
+  constructor (props) {
+    super(props)
+
+    this.refs = {}
+  }
+
   componentDidMount () {
     this.scroller = new Scroll(ReactDOM.findDOMNode(this.refs.children))
     this.handler = (e) => this.props.onFastscroll(e)
@@ -20,7 +26,7 @@ class Fastscroll extends Component {
 
   render () {
     return React.cloneElement(this.props.children, {
-      ref: 'children'
+      ref: (children) => { this.refs.children = children }
     })
   }
 }

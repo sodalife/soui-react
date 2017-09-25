@@ -24,6 +24,12 @@ class ViewMain extends React.Component {
     className: PropTypes.string,
   }
 
+  constructor (props) {
+    super(props)
+
+    this.refs = {}
+  }
+
   componentDidMount () {
     let { container } = this.refs
     this.releaseFocus = focus(container)
@@ -34,18 +40,18 @@ class ViewMain extends React.Component {
   }
 
   render () {
-    let { children, className, ...props } = this.props
-    return (<main className={cx(styles.main, className)} ref="container" {...props}>
-      {children}
-    </main>)
+    let { className, ...props } = this.props
+    return (<main
+      className={cx(styles.main, className)}
+      ref={(container) => {this.refs.container = container}}
+      {...props}
+      />)
   }
 }
 
-const ViewCard = ({ children, className = '', ...props }) => {
+const ViewCard = ({ className = '', ...props }) => {
   return (
-    <div className={cx(styles.card, className)} {...props}>
-      {children}
-    </div>
+    <div className={cx(styles.card, className)} {...props} />
   )
 }
 ViewCard.propTypes = {
