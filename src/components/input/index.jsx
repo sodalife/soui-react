@@ -29,6 +29,7 @@ class Input extends Component {
     this.state = {
       focus: false,
     }
+    this.refs = {}
   }
 
   handleClickField () {
@@ -51,7 +52,7 @@ class Input extends Component {
     }
   }
 
-  render() {
+  render () {
     let { className, icon, addon, error, onClickAddon, ...props } = this.props
     return (<span
       className={cx(styles.field, {
@@ -68,7 +69,7 @@ class Input extends Component {
         className={styles.input}
         onFocus={this.handleFocus.bind(this)}
         onBlur={this.handleBlur.bind(this)}
-        ref="input"
+        ref={(input) => { this.refs.input = input }}
       />
       {addon ? <span className={styles.addon} onClick={onClickAddon}>
         {addon}
