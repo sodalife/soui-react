@@ -1,6 +1,6 @@
 {
   "name": "@sodalife/soui-react",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "soda ui components library, for react",
   "main": "dist/soui.js",
   "browser": "dist/soui.standalone.js",
