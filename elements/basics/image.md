@@ -7,13 +7,13 @@
 import { Image } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	render () {
-		return <Image 
-			src="https://unsplash.it/320/200/?random"
-			placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
-			error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
-		 />
-	}
+  render () {
+    return <Image 
+      src="https://unsplash.it/320/200/?random"
+      placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
+      error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
+     />
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -27,6 +27,7 @@ ReactDOM.render(<App />, document.body)
 | src         | 图片地址                                     | string | -      |
 | placeholder | 图片未设定或未加载完成时，代替展示的图片地址 | string | -      |
 | error       | 图片加载错误时，代替展示的图片地址           | string | -      |
+| ...props    | 其余继承所有原生 img 标签属性                | -      | -      |
 
 ## 实例演示
 ```jsx
@@ -35,13 +36,13 @@ ReactDOM.render(<App />, document.body)
 const { Image } = soui
 
 export default class App extends React.Component {
-	render () {
-		return <Image 
-			src="https://unsplash.it/320/200/?random"
-			placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
-			error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
-		 />
-	}
+  render () {
+    return <Image 
+      src="https://unsplash.it/320/200/?random"
+      placeholder="https://imgplaceholder.com/320x200/cccccc/757575/ion-android-more-horizontal"
+      error="https://imgplaceholder.com/320x200/cccccc/757575/fa-bug"
+     />
+  }
 }
 </script>
 ```

@@ -5,9 +5,9 @@
 import { Button } from '@sodalife/soui-react'
 
 class App extends React.Component {
-	render () {
-		return <Button type="primary">确认</Button>
-	}
+  render () {
+    return <Button type="primary">确认</Button>
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -21,7 +21,7 @@ ReactDOM.render(<App />, document.body)
 | type     | 类型，可选值为 ``primary`` ``ghost`` ``default`` | string  | ``default`` |
 | size     | 尺寸，可选值为 ``small`` ``normal`` ``block``    | string  | ``normal``  |
 | disabled | 是否被禁用                                       | boolean | false       |
-| children | 按钮中的文字                                     | node    | -           |
+| ...props | 其余继承所有原生 button 标签属性                 | -       | -           |
 
 ## 实例演示
 ```jsx
@@ -30,9 +30,9 @@ ReactDOM.render(<App />, document.body)
 const { Button } = soui
 
 export default class App extends React.Component {
-	render () {
-		return <Button type="primary" onClick={() => alert('好的')}>确认</Button>
-	}
+  render () {
+    return <Button type="primary" onClick={() => alert('好的')}>确认</Button>
+  }
 }
 </script>
 ```

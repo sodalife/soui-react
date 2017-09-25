@@ -21,9 +21,9 @@ ReactDOM.render(<Button>Hello Soda</Button>, document.getElementsByTagName('body
 /*react*/
 <script>
 export default class Application extends React.Component {
-	render() {
-		return <soui.Button>Hello Soda</soui.Button>
-	}
+  render() {
+    return <soui.Button>Hello Soda</soui.Button>
+  }
 }
 </script>
 ```

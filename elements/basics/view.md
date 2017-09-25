@@ -14,13 +14,13 @@ import { View } from '@sodalife/soui-react'
 const { ViewMain } = View
 
 class App extends React.Component {
-	render () {
-		return <View>
-			<ViewMain>
-				Hi
-			</ViewMain>
-		</View>
-	}
+  render () {
+    return <View>
+      <ViewMain>
+        Hi
+      </ViewMain>
+    </View>
+  }
 }
 
 ReactDOM.render(<App />, document.body)
@@ -29,14 +29,16 @@ ReactDOM.render(<App />, document.body)
 
 ## API
 ### View
-|    属性     |                     说明                     |  类型  | 默认值 |
-| ----------- | -------------------------------------------- | ------ | ------ |
-| children         | 子内容                                     | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 子内容                        | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 ### ViewMain
-|    属性     |                     说明                     |  类型  | 默认值 |
-| ----------- | -------------------------------------------- | ------ | ------ |
-| children         | 子内容                                     | node | -      |
+|   属性   |             说明              | 类型 | 默认值 |
+| -------- | ----------------------------- | ---- | ------ |
+| children | 子内容                        | node | -      |
+| ...props | 其余继承所有原生 div 标签属性 | -    | -      |
 
 
 ## 更多
