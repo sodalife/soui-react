@@ -20,9 +20,10 @@ ReactDOM.render(<Button>Hello Soda</Button>, document.getElementsByTagName('body
 ```jsx
 /*react*/
 <script>
+const { Button, Icon, alert } = soui
 export default class Application extends React.Component {
   render() {
-    return <soui.Button>Hello Soda</soui.Button>
+    return <Button type="ghost" onClick={() => alert({ message: 'Hello world.' })}><Icon type="heart-colored" /> Biu !</Button>
   }
 }
 </script>
@@ -30,4 +31,3 @@ export default class Application extends React.Component {
 
 ## 谁在使用
 - [Sodalife](https://m.sodalife.xyz/v1/?channel=githuab)
-
