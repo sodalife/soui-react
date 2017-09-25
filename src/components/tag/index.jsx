@@ -52,7 +52,7 @@ class Tag extends Component {
     let { selected } = this.state
     return (<div className={cx(styles.tag, {
         [styles.selected]: selected
-      }, className)} onClick={this.handleClick.bind(this)} {...omit(this.props, 'className', 'selected', 'onClick')}/>)
+      }, className)} onClick={this.handleClick.bind(this)} {...omit(this.props, ['className', 'selected', 'onClick'])}/>)
   }
 }
 

@@ -39,7 +39,7 @@ class Confirm extends Component {
         <Button key="cancel" type="ghost" className={cx(styles.button, styles.cancel)} onClick={this.props.onCancel} disabled={cancelDisabled}>{cancelText}</Button>,
         <Button key="ok" type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>,
     ]
-    return (<Dialog footer={footer} {...pick(this.props, 'title', 'onClosed', 'visible')}>
+    return (<Dialog footer={footer} {...pick(this.props, ['title', 'onClosed', 'visible'])}>
       { message }
     </Dialog>)
   }

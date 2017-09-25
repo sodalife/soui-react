@@ -33,7 +33,7 @@ class Alert extends Component {
     let footer = (
       <Button type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>
     )
-    return (<Dialog footer={footer} {...pick(this.props, 'title', 'onClosed', 'visible')}>
+    return (<Dialog footer={footer} {...pick(this.props, ['title', 'onClosed', 'visible'])}>
       { message }
     </Dialog>)
   }
