@@ -67,7 +67,7 @@ class Prompt extends Component {
     ]
     return (<Dialog footer={footer} {...pick(this.props, ['title', 'onClosed', 'visible'])}>
       <form onSubmit={this.handleFormSubmit.bind(this)}>
-        <Input placeholder={placeholder} defaultValue={initialValue} onChange={this.handleInputChange.bind(this)} ref="input" />
+        <Input placeholder={placeholder} defaultValue={initialValue} onChange={this.handleInputChange.bind(this)} />
       </form>
       <div className={styles.message}>
         { message }
