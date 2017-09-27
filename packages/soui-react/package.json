@@ -3,7 +3,7 @@
   "version": "0.3.5",
   "description": "soda ui components library, for react",
   "main": "dist/soui.js",
-  "browser": "dist/soui.standalone.js",
+  "unpkg": "dist/soui.standalone.js",
   "files": [
     "dist"
   ],
