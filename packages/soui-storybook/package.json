@@ -1,0 +1,36 @@
+{
+  "name": "@sodalife/soui-storybook",
+  "private": true,
+  "version": "0.1.0",
+  "description": "storybook for soui",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "start": "start-storybook -p 9001 -c storybook",
+    "build": "build-storybook -c storybook -o ./dist"
+  },
+  "author": "yelo",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@sodalife/soui-react": "^0.3.5",
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addon-options": "^3.2.6",
+    "@storybook/react": "^3.2.8",
+    "autoprefixer": "^7.1.4",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.7",
+    "lodash": "^4.17.4",
+    "postcss-loader": "^2.0.6",
+    "precss": "^2.0.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.0"
+  }
+}
