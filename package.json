@@ -23,6 +23,11 @@
     "gh-pages": "npm run build-storybook && gh-pages -d docs --dotfiles",
     "prepublish": "npm run build"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "peerDependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
@@ -51,6 +56,7 @@
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
+    "cz-conventional-changelog": "^2.0.0",
     "file-loader": "^0.11.2",
     "gh-pages": "^1.0.0",
     "lodash": "^4.17.4",
