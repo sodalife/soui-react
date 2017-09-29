@@ -1,0 +1,16 @@
+{
+  "name": "@sodalife/soui-css",
+  "version": "0.1.0",
+  "description": "Soda UI Components Stylesheets",
+  "author": "yelo",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "cssnano": "^3.10.0",
+    "lost": "^8.2.0",
+    "postcss-calc": "^6.0.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-color-function": "^4.0.0",
+    "precss": "^2.0.0"
+  }
+}

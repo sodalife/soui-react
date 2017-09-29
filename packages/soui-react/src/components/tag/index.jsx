@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/components/tag/style.pcss'
 
 /**
  * reference to https://github.com/ant-design/ant-design-mobile/blob/c58a9c3bb2740357bf674f465d19dcf605b987c5/components/tag/index.tsx

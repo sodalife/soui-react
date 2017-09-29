@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Animate from 'rc-animate'
 
-import styles from './style.pcss'
-import transition from './transition.pcss'
+import styles from '@sodalife/soui-css/src/dialogs/dialog/style.pcss'
+import transition from '@sodalife/soui-css/src/dialogs/dialog/transition.pcss'
 
 class Dialog extends Component {
   static propTypes = {

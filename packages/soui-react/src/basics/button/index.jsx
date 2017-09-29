@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/basics/button/style.pcss'
 
 const Button = ({ children, className, onClick, type, size, disabled, ...props }) => {
   return (<button className={cx(styles.button, styles[type], styles[size], className)} disabled={disabled} onClick={onClick} {...props}>

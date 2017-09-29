@@ -7,7 +7,7 @@ import Button from '../../../basics/button/index.jsx'
 import Dialog from '../../dialog/index.jsx'
 import ghostify from '../ghostify/index.jsx'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/dialogs/modals/confirm/style.pcss'
 
 class Confirm extends Component {
   static propTypes = {

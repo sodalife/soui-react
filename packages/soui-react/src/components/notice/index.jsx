@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import Icon from '../../basics/icon/index.jsx'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/components/notice/style.pcss'
 
 class Notice extends Component {
   static propTypes = {

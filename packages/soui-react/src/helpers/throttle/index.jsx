@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/helpers/throttle/style.pcss'
 
 const TICK = 1000
 

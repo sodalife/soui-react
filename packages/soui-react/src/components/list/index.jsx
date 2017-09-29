@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import Icon from '../../basics/icon/index.jsx'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/components/list/style.pcss'
 
 const List = ({ className = '', ...props }) => {
   return (<div className={cx(styles.list, className)} {...props}/>)

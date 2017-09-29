@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import './assets/iconfont'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/basics/icon/style.pcss'
 
 import TYPE from './types'
 

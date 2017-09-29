@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/components/panel/style.pcss'
 
 const Panel = ({ title, subtitle, children, ...props }) => {
   return (<div className={styles.panel} {...props}>

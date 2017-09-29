@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/components/jumbotron/style.pcss'
 
 const Jumbotron = ({ children, className, ...props }) => {
   return (<div className={cx(styles.jumbotron, className)} {...props}>

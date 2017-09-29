@@ -1,3 +1,15 @@
+# soui.css
+> Soda UI Components Stylesheets
+
+## Installation
+```sh
+npm i --save @sodalife/soui-css
+```
+
+## Usage
+### rollup
+```javascript
+// rollup.config.js
 import nodejs from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import postcss from 'rollup-plugin-postcss'
@@ -8,12 +20,7 @@ const external = require('@yelo/rollup-node-external')
 const cssExportMap = {}
 
 export default {
-  input: 'src/index.js',
-  output: {
-    file: 'dist/soui.js',
-    format: 'umd',
-    name: 'soui',
-  },
+	// ...input and output
   external: external({
     whitelist: [/^@sodalife\/soui-css(\/.*)?/],
   }),
@@ -41,3 +48,7 @@ export default {
     }),
  ],
 }
+```
+
+## License
+[Apache License 2.0](LICENSE)

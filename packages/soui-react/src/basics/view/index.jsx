@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import focus from './focus'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/basics/view/style.pcss'
 
 const View = ({ children, className, ...props }) => {
   return (

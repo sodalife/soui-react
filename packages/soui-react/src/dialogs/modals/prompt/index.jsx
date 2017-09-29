@@ -8,7 +8,7 @@ import Input from '../../../components/input/index.jsx'
 import Dialog from '../../dialog/index.jsx'
 import ghostify from '../ghostify/index.jsx'
 
-import styles from './style.pcss'
+import styles from '@sodalife/soui-css/src/dialogs/modals/prompt/style.pcss'
 
 class Prompt extends Component {
   static propTypes = {
