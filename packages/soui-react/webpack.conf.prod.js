@@ -23,7 +23,6 @@ module.exports = merge(base, {
   },
   plugins: [
     new ProgressBarPlugin(),
-    new LodashModuleReplacementPlugin,
     new webpack.DefinePlugin({
       'process.env': {
           NODE_ENV: JSON.stringify('production'),
