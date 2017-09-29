@@ -17,7 +17,7 @@
     "clean": "rm -rf ./dist",
     "build": "npm run build:umd && npm run build:standalone",
     "build:umd": "rollup -c",
-    "build:standalone": "webpack --config webpack.conf.prod.js",
+    "build:standalone": "rollup -c rollup.conf.standalone.js",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
