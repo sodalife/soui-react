@@ -4,7 +4,7 @@
     "bootstrap": "cd packages/soui-react && npm i && cd ../soui-storybook && npm i && cd ../soui-css && npm i && cd ../.. && lerna bootstrap ",
     "clean": "rm -rf ./docs/storybook && lerna clean",
     "build:docs": "cd packages/soui-storybook && npm run build && cp -r ./dist/ ../../docs/storybook",
-    "gh-pages": "npm run build:storybook && gh-pages -d docs --dotfiles",
+    "gh-pages": "npm run build:docs && gh-pages -d docs --dotfiles",
     "pub": "lerna publish"
   },
   "config": {
