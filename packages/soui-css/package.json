@@ -4,6 +4,10 @@
   "description": "Soda UI Components Stylesheets",
   "author": "yelo",
   "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && postcss 'src/**/*.pcss' -b src -d ./dist -x css"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "cssnano": "^3.10.0",
@@ -11,6 +15,7 @@
     "postcss-calc": "^6.0.0",
     "postcss-cli": "^4.1.1",
     "postcss-color-function": "^4.0.0",
-    "precss": "^2.0.0"
+    "precss": "^2.0.0",
+    "saladcss-bem": "0.0.2"
   }
 }

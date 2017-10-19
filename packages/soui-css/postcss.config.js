@@ -8,6 +8,7 @@ module.exports = {
         '>0% in CN'
       ]
     }),
+    require('saladcss-bem')({ style: 'bem', separators: { namespace: '-', modifier: '--' } }),
     require('postcss-calc')(),
     require('postcss-color-function')(),
     require('lost')(),
