@@ -4,23 +4,32 @@
   "description": "Soda UI Components Stylesheets",
   "author": "yelo",
   "license": "Apache-2.0",
+  "files": [
+    "src",
+    "dist",
+    "postcss.config.js"
+  ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development npm run build -- -w",
-    "clean": "rimraf dist",
-    "build": "npm run clean && postcss 'src/**/*.pcss' -b src -d ./dist -x css"
+    "start": "cross-env NODE_ENV=development gulp",
+    "clean": "gulp clean",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "autoprefixer": "^7.1.4",
     "cssnano": "^3.10.0",
     "lost": "^8.2.0",
     "postcss-calc": "^6.0.0",
-    "postcss-cli": "^4.1.1",
     "postcss-color-function": "^4.0.0",
     "precss": "^2.0.0",
     "saladcss-bem": "0.0.2"
   },
   "devDependencies": {
     "cross-env": "^5.1.0",
-    "rimraf": "^2.6.2"
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.0",
+    "postcss-cli": "^4.1.1"
   }
 }
