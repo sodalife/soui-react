@@ -1,77 +1,82 @@
 @import '../../theme/variables.pcss';
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 1.5em;
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  transition: all 80ms ease-in;
+@bem-namespace soui {
+  @block button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5em;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    transition: all 80ms ease-in;
 
-  /**
-   * size: block, normal, small
-   */
-  &.normal, &.block {
-    padding: 9px calc(9px + 16px * 0.8);
-    font-size: 16px;
-  }
-  &.block {
-    display: block;
-    width: 100%;
-  }
-  &.small {
-    padding: 3px calc(3px + 12px - 1px);
-    font-size: 12px;
-  }
 
-  /**
-   * type: primary, default, ghost
-   */
-  &.default {
-    background-color: #fff;
-    border: 1px solid $theme-color-primary;
-    color: $theme-color-primary;
-    &:active {
-      background-color: color($theme-color-primary saturation(100%) lightness(97%));
-      color: color($theme-color-primary lightness(+ 15%));
+    /**
+    * size: block, normal, small
+    */
+    @modifier normal, block {
+      padding: 9px calc(9px + 16px * 0.8);
+      font-size: 16px;
     }
-  }
-  &.primary {
-    background-color: $theme-color-primary;
-    border: 1px solid $theme-color-primary;
-    color: #fff;
-    &:active {
-      background-color: color($theme-color-primary shade(10%));
-      color: color($theme-color-primary tint(30%));
+    @modifier block {
+      display: block;
+      width: 100%;
     }
-  }
-  &.ghost {
-    background-color: #fff;
-    border: 1px solid color($theme-color-secondary lightness(* 2));
-    color: $theme-color-secondary;
-    &:active {
-      background-color: color($theme-color-primary saturation(100%) lightness(97%));
+    @modifier small {
+      padding: 3px calc(3px + 12px - 1px);
+      font-size: 12px;
+    }
+
+    /**
+    * type: primary, default, ghost
+    */
+    @modifier default {
+      background-color: #fff;
       border: 1px solid $theme-color-primary;
-      color: $theme-color-secondary;
+      color: $theme-color-primary;
+      &:active {
+        background-color: color($theme-color-primary saturation(100%) lightness(97%));
+        color: color($theme-color-primary lightness(+ 15%));
+      }
     }
-  }
+    @modifier primary {
+      background-color: $theme-color-primary;
+      border: 1px solid $theme-color-primary;
+      color: #fff;
+      &:active {
+        background-color: color($theme-color-primary shade(10%));
+        color: color($theme-color-primary tint(30%));
+      }
+    }
+    @modifier ghost {
+      background-color: #fff;
+      border: 1px solid color($theme-color-secondary lightness(* 2));
+      color: $theme-color-secondary;
+      &:active {
+        background-color: color($theme-color-primary saturation(100%) lightness(97%));
+        border: 1px solid $theme-color-primary;
+        color: $theme-color-secondary;
+      }
+    }
 
-  &:disabled {
-    background-color: $theme-color-disabled;
-    border: 1px solid $theme-color-disabled;
-    color: color($theme-color-disabled shade(18%));
-    &:active {
+    &:disabled {
       background-color: $theme-color-disabled;
       border: 1px solid $theme-color-disabled;
       color: color($theme-color-disabled shade(18%));
+      &:active {
+        background-color: $theme-color-disabled;
+        border: 1px solid $theme-color-disabled;
+        color: color($theme-color-disabled shade(18%));
+      }
     }
+
+    @element children {
+      width: 100%;
+      text-align: center;
+    }
+
   }
 
-  .children {
-    width: 100%;
-    text-align: center;
-  }
 }

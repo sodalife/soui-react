@@ -3,8 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Animate from 'rc-animate'
 
+import bemify from '../../utils/bemify'
+
 import styles from '@sodalife/soui-css/src/dialogs/dialog/style.pcss'
 import transition from '@sodalife/soui-css/src/dialogs/dialog/transition.pcss'
+
+const bem = bemify(styles, 'soui').b('dialog')
 
 class Dialog extends Component {
   static propTypes = {
@@ -38,13 +42,13 @@ class Dialog extends Component {
       <Animate {...Dialog.transition} onEnd={this.handleAnimateEnd.bind(this)}>
         {
           visible ?
-            <div className={cx(styles.container, { [`${styles.visible}`]: visible })}>
-              <div className={styles.dialog}>
-                <h3 className={styles.title}>{ title }</h3>
-                <div className={styles.content}>
+            <div className={cx(bem.b('container')())}>
+              <div className={bem()}>
+                <h3 className={bem.e('title')}>{ title }</h3>
+                <div className={bem.e('content')}>
                   {children}
                 </div>
-                {footer ? (<div className={styles.footer}>{footer}</div>) : null}
+                {footer ? (<div className={bem.e('footer')}>{footer}</div>) : null}
               </div>
             </div> :
             null

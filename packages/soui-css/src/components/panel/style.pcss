@@ -1,30 +1,33 @@
 @import '../../theme/variables.pcss';
 
-.panel {
-  background-color: #fff;
-  .panelTitle {
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    padding: 0 16px;
-    color: #333;
-    border-left: 2px solid $theme-color-primary;
-    box-sizing: border-box;
-    .panelSubtitle {
-      float: right;
-      font-size: 13px;
-      color: #999;
+@bem-namespace soui {
+  @block panel {
+    background-color: #fff;
+    @element title {
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      padding: 0 16px;
+      color: #333;
+      border-left: 2px solid $theme-color-primary;
+      box-sizing: border-box;
+      .soui-panel__subtitle {
+        float: right;
+        font-size: 13px;
+        color: #999;
+      }
     }
   }
-  .panelItem {
-    .container {
+
+  @block panel-item {
+    @element container {
       display: flex;
       padding: 10px;
       border-bottom: 1px solid #f0f0f0;
       &:active {
         background-color: #efefef;
       }
-      .thumbnail {
+      .soui-panel-item__thumbnail {
         width: 100px;
         margin-right: 14px;
         img {
@@ -32,15 +35,15 @@
           max-width: 100%;
         }
       }
-      .content {
+      .soui-panel-item__content {
         flex: 1;
         line-height: 1.4em;
-        .title {
+        .soui-panel-item__title {
           font-size: 16px;
           color: #000;
           margin-bottom: 12px;
         }
-        .description {
+        .soui-panel-item__description {
           font-size: 14px;
           color: #9b9b9b;
         }

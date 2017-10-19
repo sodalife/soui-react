@@ -3,11 +3,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import bemify from '../../../utils/bemify'
 import Button from '../../../basics/button/index.jsx'
 import Dialog from '../../dialog/index.jsx'
 import ghostify from '../ghostify/index.jsx'
 
 import styles from '@sodalife/soui-css/src/dialogs/modals/confirm/style.pcss'
+
+const bemButton = bemify(styles, 'soui').b('confirm').b('button')
 
 class Confirm extends Component {
   static propTypes = {
@@ -36,8 +39,8 @@ class Confirm extends Component {
   render () {
     let { message, okText, okDisabled, cancelText, cancelDisabled } = this.props
     let footer = [
-        <Button key="cancel" type="ghost" className={cx(styles.button, styles.cancel)} onClick={this.props.onCancel} disabled={cancelDisabled}>{cancelText}</Button>,
-        <Button key="ok" type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>,
+        <Button key="cancel" type="ghost" className={cx(bemButton(), bemButton.m('cancel'))} onClick={this.props.onCancel} disabled={cancelDisabled}>{cancelText}</Button>,
+        <Button key="ok" type="primary" className={bemButton()} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>,
     ]
     return (<Dialog footer={footer} {...pick(this.props, ['title', 'onClosed', 'visible'])}>
       { message }

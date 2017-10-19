@@ -3,11 +3,15 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import bemify from '../../utils/bemify'
+
 import styles from '@sodalife/soui-css/src/basics/button/style.pcss'
 
+const bem = bemify(styles, 'soui').b('button')
+
 const Button = ({ children, className, onClick, type, size, disabled, ...props }) => {
-  return (<button className={cx(styles.button, styles[type], styles[size], className)} disabled={disabled} onClick={onClick} {...props}>
-    <div className={styles.children}>
+  return (<button className={cx(bem(), bem.m(type), bem.m(size), className)} disabled={disabled} onClick={onClick} {...props}>
+    <div className={bem.e('children')}>
       { children }
     </div>
   </button>)

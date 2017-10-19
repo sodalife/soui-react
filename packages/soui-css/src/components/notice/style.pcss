@@ -1,22 +1,22 @@
-.notice {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff3cf;
-  color: #f59423;
-  padding: 0 12px;
-  font-size: 12px;
-  .icon, .close {
-    padding: 12px 8px;
-    line-height: 0;
-  }
-  .icon {
-  }
-  .content {
+@bem-namespace soui {
+  @block notice {
     width: 100%;
-    padding: calc((36px - 18px) / 2) 0;
-    line-height: 18px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff3cf;
+    color: #f59423;
+    padding: 0 12px;
+    font-size: 12px;
+    @element icon, close {
+      padding: 12px 8px;
+      line-height: 0;
+    }
+    @element content {
+      width: 100%;
+      padding: calc((36px - 18px) / 2) 0;
+      line-height: 18px;
+    }
   }
 }

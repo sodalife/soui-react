@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import bemify from '../../utils/bemify'
+
 import styles from '@sodalife/soui-css/src/components/panel/style.pcss'
 
+const bem = bemify(styles, 'soui').b('panel')
+
 const Panel = ({ title, subtitle, children, ...props }) => {
-  return (<div className={styles.panel} {...props}>
-    <div className={styles.panelTitle}>
+  return (<div className={bem()} {...props}>
+    <div className={bem.e('title')}>
       <span>{title}</span>
-      <span className={styles.panelSubtitle}>{subtitle}</span>
+      <span className={bem.e('subtitle')}>{subtitle}</span>
     </div>
-    <div className={styles.list}>
+    <div className={bem.e('list')}>
       {children}
     </div>
   </div>)
@@ -21,14 +25,15 @@ Panel.propTypes = {
 }
 
 const PanelItem = ({ title, thumbnail, description, ...props }) => {
-  return (<div className={styles.panelItem} {...props}>
-    <div className={styles.container}>
-      <div className={styles.thumbnail}>
+  let block = bem.b('item')
+  return (<div className={block()} {...props}>
+    <div className={block.e('container')}>
+      <div className={block.e('thumbnail')}>
         <img src={thumbnail} />
       </div>
-      <div className={styles.content}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.description}>{description}</div>
+      <div className={block.e('content')}>
+        <div className={block.e('title')}>{title}</div>
+        <div className={block.e('description')}>{description}</div>
       </div>
     </div>
   </div>)

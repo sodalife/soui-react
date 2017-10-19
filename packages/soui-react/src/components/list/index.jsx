@@ -1,13 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import bemify from '../../utils/bemify'
 
 import Icon from '../../basics/icon/index.jsx'
 
 import styles from '@sodalife/soui-css/src/components/list/style.pcss'
 
+const bem = bemify(styles).b('soui').b('list')
+
 const List = ({ className = '', ...props }) => {
-  return (<div className={cx(styles.list, className)} {...props}/>)
+  return (<div className={cx(bem(), className)} {...props}/>)
 }
 List.propTypes = {
   className: PropTypes.string,
@@ -17,17 +20,17 @@ List.defaultProps = {
 }
 
 const ListItem = ({ children = null, icon = null, thumbnail = null, arrow = false, checked = false, extra = null, className = '', ...props }) => {
-  return (<div className={cx(styles.item, className)} {...props}>
-    <div className={styles.container}>
-      <div className={styles.left}>
-        {icon ? <Icon className={styles.icon} type={icon} /> : null}
-        {thumbnail ? <span className={styles.thumbnail}><img src={thumbnail} /></span> : null}
-        <span className={styles.content}>{children}</span>
+  return (<div className={cx(bem.b('item')(), className)} {...props}>
+    <div className={bem.e('container')}>
+      <div className={bem.e('left')}>
+        {icon ? <Icon className={bem.e('icon')} type={icon} /> : null}
+        {thumbnail ? <span className={bem.e('thumbnail')}><img src={thumbnail} /></span> : null}
+        <span className={bem.e('content')}>{children}</span>
       </div>
-      <div className={styles.right}>
-        <span className={styles.extra}>{extra}</span>
-        {arrow ? <Icon className={styles.icon} type="right" /> : null}
-        {checked ? <Icon className={styles.checked} type="check-circle" /> : null}
+      <div className={bem.e('right')}>
+        <span className={bem.e('extra')}>{extra}</span>
+        {arrow ? <Icon className={bem.e('icon')} type="right" /> : null}
+        {checked ? <Icon className={bem.e('checked')} type="check-circle" /> : null}
       </div>
     </div>
   </div>)
@@ -52,13 +55,13 @@ ListItem.defaultProps = {
 }
 
 const ListSubItem = ({ className = '', ...props }) => {
-  return <ListItem className={cx(styles.sub, className)} {...props} />
+  return <ListItem className={cx(bem.b('sub')(), className)} {...props} />
 }
 
 function BasicItem (type) {
   let Item = ({ children = null, className = '', ...props }) => {
-    return (<div className={cx(styles[type.toLowerCase()], className)} {...props}>
-      <div className={styles.container}>
+    return (<div className={cx(bem.b(type.toLowerCase())(), className)} {...props}>
+      <div className={bem.e('container')}>
         {children}
       </div>
     </div>)
@@ -76,7 +79,7 @@ function BasicItem (type) {
 }
 
 const ListBrief = ({ className = '', ...props }) => {
-  return <span className={cx(styles.brief, className)} {...props} />
+  return <span className={cx(bem.b('brief')(), className)} {...props} />
 }
 ListBrief.propTypes = {
   className: PropTypes.string,

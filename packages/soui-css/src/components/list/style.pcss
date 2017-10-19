@@ -5,7 +5,7 @@
   padding-left: 18px;
   background-color: #fff;
   text-decoration: none;
-  .container {
+  .soui-list__container {
     display: flex;
     flex-flow: row wrap;
     box-sizing: border-box;
@@ -17,29 +17,29 @@
     border-bottom: 1px solid #eee;
   }
   &:last-child {
-    .container {
+    .soui-list__container {
       border-bottom: none;
     }
   }
 }
 
-.list {
+.soui-list {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  .item {
+  .soui-list-item {
     @mixin row;
     padding: 0 0 0 18px;
-    .container {
+    .soui-list__container {
       justify-content: space-between;
       border-bottom: 1px solid #eee;
-      .left {
+      .soui-list__left {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        .icon {
+        .soui-list__icon {
           padding-right: 12px;
         }
-        .thumbnail {
+        .soui-list__thumbnail {
           width: 30px;
           height: 24px;
           padding-right: 12px;
@@ -50,20 +50,20 @@
             max-height: 100%;
           }
         }
-        .content {
+        .soui-list__content {
           min-height: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
           align-items: flex-start;
           line-height: 16px;
-          .brief {
+          .soui-list__brief {
             font-size: 11px;
             color: #9b9b9b;
           }
         }
       }
-      .right {
+      .soui-list__right {
         color: #999;
         font-size: 14px;
         line-height: 1.8em;
@@ -72,16 +72,16 @@
         word-break: break-all;
         display: flex;
         align-items: center;
-        .extra {
+        .soui-list__extra {
           -webkit-user-select: text;
              -moz-user-select: text;
                   user-select: text;
         }
-        .icon {
+        .soui-list__icon {
           color: #d7d7d7;
           padding-left: 6px;
         }
-        .checked {
+        .soui-list__checked {
           display: block;
           color: $theme-color-primary;
           font-size: 22px;
@@ -89,36 +89,36 @@
       }
     }
     &:last-child {
-      .item {
+      .soui-list-item {
         border-bottom: none;
       }
     }
     &:active {
       background-color: #efefef;
     }
-    &.sub {
-      .container {
+    &.soui-list--sub {
+      .soui-list__container {
         font-size: 14px;
         color: #666;
-        .left {
-          .icon, .thumbnail {
+        .soui-list__left {
+          .soui-list__icon, .soui-list__thumbnail {
             padding-right: 18px;
           }
         }
       }
     }
   }
-  .title {
+  .soui-list-title {
     @mixin row;
     padding: 0;
-    .container {
+    .soui-list__container {
       padding: 8px 18px;
     }
   }
-  .button {
+  .soui-list-button {
     @mixin row;
     padding: 0;
-    .container {
+    .soui-list__container {
       padding: 8px 18px;
       justify-content: center;
       color: $theme-color-primary;
@@ -127,15 +127,15 @@
       background-color: #efefef;
     }
   }
-  .group {
+  .soui-list-group {
     @mixin row;
-    & > .container {
+    & > .soui-list__container {
       display: block;
       padding: 8px 0;
     }
-    .item {
+    .soui-list-item {
       padding: 0;
-      .container {
+      .soui-list__container {
         padding: 0 18px 0 0;
       }
     }

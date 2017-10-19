@@ -1,23 +1,31 @@
-.navbar {
-  width: 100%;
-  height: calc(50px + 1px);
-  position: relative;
-  background-color: transparent;
-  .bar {
+@bem-namespace soui {
+  @block navbar {
     width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    border-top: 1px solid rgb(228,228,228);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
+    height: calc(50px + 1px);
+    position: relative;
+    background-color: transparent;
+    @element bar {
+      width: 100%;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      border-top: 1px solid rgb(228,228,228);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1000;
+    }
+    @element .new {
+      position: absolute;
+      top: -8px;
+      right: 19px;
+      color: #fb3937;
+    }
   }
-  .item {
+  @block navbar-item {
     position: relative;
     width: 80px;
     display: flex;
@@ -25,25 +33,19 @@
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    .icon {
+    @element icon {
       font-size: 24px;
       color: #333;
     }
-    .title {
+    @element title {
       text-align: center;
       font-size: 10px;
       color: #666;
     }
-    &.active {
-      .title {
+    &.soui-navbar-item--active {
+      .soui-navbar-item-title {
         color: #00ac1c;
       }
     }
-  }
-  .new {
-    position: absolute;
-    top: -8px;
-    right: 19px;
-    color: #fb3937;
   }
 }

@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Icon from '../../basics/icon/index.jsx'
+import bemify from '../../utils/bemify'
 
 import styles from '@sodalife/soui-css/src/components/notice/style.pcss'
+
+const bem = bemify(styles, 'soui').b('notice')
 
 class Notice extends Component {
   static propTypes = {
@@ -41,12 +44,12 @@ class Notice extends Component {
     if (!show) {
       return null
     }
-    return (<div className={cx(styles.notice, className)} {...props}>
-      <div className={styles.icon}><Icon type="exclamation-circle-o" /></div>
-      <div className={styles.content}>
+    return (<div className={cx(bem(), className)} {...props}>
+      <div className={bem.e('icon')}><Icon type="exclamation-circle-o" /></div>
+      <div className={bem.e('content')}>
         {children}
       </div>
-      {closable ? <div className={styles.close} onClick={this.handleClickClose.bind(this)}><Icon type="close" /></div> : null}
+      {closable ? <div className={bem.e('close')} onClick={this.handleClickClose.bind(this)}><Icon type="close" /></div> : null}
     </div>)
   }
 }

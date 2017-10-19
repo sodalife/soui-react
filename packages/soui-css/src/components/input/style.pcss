@@ -1,54 +1,57 @@
 @import '../../theme/variables.pcss';
 
-$height: 48px;
-$padding: 14px;
+@bem-namespace soui {
+  $height: 48px;
+  $padding: 14px;
 
-.field {
-  display: flex;
-  width: 100%;
-  padding: 0 $padding;
-  box-sizing: border-box;
-  height: $height;
-  line-height: $height;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  transition: all 200ms ease;
-  &.focus {
-    border: 1px solid $theme-color-primary;
-  }
-  &.error {
-    border: 1px solid $theme-color-danger;
-  }
-  .input {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
+  @block input {
+    display: flex;
     width: 100%;
-    font-size: 1em;
-    line-height: 2em;
-    background: none;
-    border: none;
-    appearance: none;
-    outline: none;
+    padding: 0 $padding;
+    box-sizing: border-box;
+    height: $height;
+    line-height: $height;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: all 200ms ease;
+    @modifier focus {
+      border: 1px solid $theme-color-primary;
+    }
+    @modifier error {
+      border: 1px solid $theme-color-danger;
+    }
+    @element input {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      width: 100%;
+      font-size: 1em;
+      line-height: 2em;
+      background: none;
+      border: none;
+      appearance: none;
+      outline: none;
+    }
+    @element icon {
+      color: #666;
+      padding-right: $padding;
+    }
+    @element addon {
+      color: #e5e5e5;
+      padding-left: $padding;
+    }
+    @element addonActive {
+      color: $theme-color-primary;
+    }
+    @element addonHide {
+      opacity: 0;
+    }
   }
-  .icon {
-    color: #666;
-    padding-right: $padding;
-  }
-  .addon {
-    color: #e5e5e5;
-    padding-left: $padding;
-  }
-  .addonActive {
-    color: $theme-color-primary;
-  }
-  .addonHide {
-    opacity: 0;
-  }
+
 }

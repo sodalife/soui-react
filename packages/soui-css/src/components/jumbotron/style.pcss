@@ -1,46 +1,48 @@
 @import '../../theme/variables.pcss';
 
-.jumbotron {
-  height: 206px;
-  background-image: linear-gradient(
-    0,
-    color($theme-color-jumbotron h(+ 12%) s(+ 23%) l(- 10%)),
-    color($theme-color-jumbotron h(- 16%) s(+ 2%) l(+ 9%))
-    );
-}
-
-.button {
-  display: inline-block;
-  min-width: 130px;
-  padding: 0 24px;
-  box-sizing: border-box;
-  border-radius: 48px;
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  text-align: center;
-  text-decoration: none;
-  &:active {
-    background-color: #9affed;
-    border: 1px solid #9affed;
-    color: #17d3a6;
+@bem-namespace soui {
+  @block jumbotron {
+    height: 206px;
+    background-image: linear-gradient(
+      0,
+      color($theme-color-jumbotron h(+ 12%) s(+ 23%) l(- 10%)),
+      color($theme-color-jumbotron h(- 16%) s(+ 2%) l(+ 9%))
+      );
   }
-}
 
-.smallButton {
-   background-color: rgba(0,0,0,0);
-   border: 1px solid #b3ffe6;
-   color: #b3ffe6;
-   font-size: 13px;
-   text-align: center;
-   border-radius: 4px;
-   line-height: 1em;
-   padding: calc((26px - 1px * 2 - 13px) / 2) 15px;
-   &:active {
-     background-color: #9affed;
-     border: 1px solid #9affed;
-     color: #17d3a6;
-   }
+  @block jumbotron-button {
+    display: inline-block;
+    min-width: 130px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    border-radius: 48px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    &:active {
+      background-color: #9affed;
+      border: 1px solid #9affed;
+      color: #17d3a6;
+    }
+  }
+
+  @block jumbotron-small_button {
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #b3ffe6;
+    color: #b3ffe6;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 1em;
+    padding: calc((26px - 1px * 2 - 13px) / 2) 15px;
+    &:active {
+      background-color: #9affed;
+      border: 1px solid #9affed;
+      color: #17d3a6;
+    }
+  }
 }

@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Icon from '../../basics/icon/index.jsx'
+import bemify from '../../utils/bemify'
 
 import styles from '@sodalife/soui-css/src/components/input/style.pcss'
+
+const bem = bemify(styles, 'soui').b('input')
 
 class Input extends Component {
   static propTypes = {
@@ -55,23 +58,23 @@ class Input extends Component {
   render () {
     let { className, icon, addon, error, onClickAddon, ...props } = this.props
     return (<span
-      className={cx(styles.field, {
-        [`${styles.focus}`]: this.state.focus,
-        [`${styles.error}`]: !!error,
+      className={cx(bem(), {
+        [bem.m('focus')]: this.state.focus,
+        [bem.m('error')]: !!error,
       }, className)}
       onClick={this.handleClickField.bind(this)}
     >
-      {icon ? <span className={styles.icon}>
+      {icon ? <span className={bem.e('icon')}>
         <Icon type={icon} />
       </span> : null}
       <input
         {...props}
-        className={styles.input}
+        className={bem.e('input')}
         onFocus={this.handleFocus.bind(this)}
         onBlur={this.handleBlur.bind(this)}
         ref={(input) => this.input = input}
       />
-      {addon ? <span className={styles.addon} onClick={onClickAddon}>
+      {addon ? <span className={bem.e('addon')} onClick={onClickAddon}>
         {addon}
       </span> : null}
     </span>)
@@ -114,7 +117,7 @@ class InputPassword extends Component {
     return (<Input
       {...this.props}
       type={isCovered ? 'password' : 'text'}
-      addon={<Icon type="eye" className={cx({ [`${styles.addonActive}`]: !isCovered, [`${styles.addonHide}`]: !focus })} />}
+      addon={<Icon type="eye" className={cx({ [bem.e('addonActive')]: !isCovered, [bem.e('addonHide')]: !focus })} />}
       onClickAddon={this.handleClickAddon.bind(this)}
       onFocus={this.handleFocus.bind(this)}
       onBlur={this.handleBlur.bind(this)}

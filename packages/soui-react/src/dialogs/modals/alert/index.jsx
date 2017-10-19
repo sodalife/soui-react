@@ -3,11 +3,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import bemify from '../../../utils/bemify'
 import Button from '../../../basics/button/index.jsx'
 import Dialog from '../../dialog/index.jsx'
 import ghostify from '../ghostify/index.jsx'
 
 import styles from '@sodalife/soui-css/src/dialogs/modals/alert/style.pcss'
+
+const bemButton = bemify(styles, 'soui').b('alert').b('button')
 
 class Alert extends Component {
   static propTypes = {
@@ -31,7 +34,7 @@ class Alert extends Component {
   render () {
     let { message, okText, okDisabled } = this.props
     let footer = (
-      <Button type="primary" className={styles.button} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>
+      <Button type="primary" className={bemButton()} onClick={this.props.onOk} disabled={okDisabled}>{okText}</Button>
     )
     return (<Dialog footer={footer} {...pick(this.props, ['title', 'onClosed', 'visible'])}>
       { message }

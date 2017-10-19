@@ -1,3 +1,5 @@
+var isDevelopment = process.env.NODE_ENV === 'development'
+
 module.exports = {
   plugins: [
     require('precss')(),
@@ -8,10 +10,23 @@ module.exports = {
         '>0% in CN'
       ]
     }),
-    require('saladcss-bem')({ style: 'bem', separators: { namespace: '-', modifier: '--' } }),
+    require('saladcss-bem')({
+      style: 'bem',
+      separators: {
+        namespace: '-',
+        descendent: '__',
+        modifier: '--',
+      },
+      shortcuts: {
+        'component-namespace': 'bem-namespace',
+        'component': 'block',
+        'descendent': 'element',
+        'modifier': 'modifier',
+      },
+    }),
     require('postcss-calc')(),
     require('postcss-color-function')(),
     require('lost')(),
-    require('cssnano')(),
-  ]
+    (isDevelopment || require('cssnano')()),
+  ].filter(function (plugin) { return typeof plugin !== 'boolean' }),
 }

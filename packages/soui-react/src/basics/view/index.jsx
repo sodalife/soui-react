@@ -2,13 +2,17 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
+import bemify from '../../utils/bemify'
+
 import focus from './focus'
 
 import styles from '@sodalife/soui-css/src/basics/view/style.pcss'
 
+const bem = bemify(styles, 'soui')
+
 const View = ({ children, className, ...props }) => {
   return (
-    <section className={cx(styles.view, className)} {...props}>
+    <section className={cx(bem.b('view')(), className)} {...props}>
       {children}
     </section>
   )
@@ -41,7 +45,7 @@ class ViewMain extends React.Component {
   render () {
     let { className, ...props } = this.props
     return (<main
-      className={cx(styles.main, className)}
+      className={cx(bem.b('main')(), className)}
       ref={(container) => {this.container = container}}
       {...props}
       />)
@@ -50,7 +54,7 @@ class ViewMain extends React.Component {
 
 const ViewCard = ({ className = '', ...props }) => {
   return (
-    <div className={cx(styles.card, className)} {...props} />
+    <div className={cx(bem.b('card')(), className)} {...props} />
   )
 }
 ViewCard.propTypes = {

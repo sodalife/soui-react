@@ -4,7 +4,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import bemify from '../../utils/bemify'
+
 import styles from '@sodalife/soui-css/src/helpers/throttle/style.pcss'
+
+const bem = bemify(styles, 'soui').b('throttle')
 
 const TICK = 1000
 
@@ -77,7 +81,7 @@ class Throttle extends Component {
     }
     return <span
       {...omit(this.props, keys(Throttle.propTypes))}
-      className={cx(styles.throttle, { [`${styles.disabled}`]: disabled || (countdown > 0) }, className)}
+      className={cx(bem(), { [bem.m('disabled')]: disabled || (countdown > 0) }, className)}
       onClick={this.handleClick.bind(this)}
     >
       {children}

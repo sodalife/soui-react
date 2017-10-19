@@ -1,12 +1,14 @@
-.button {
-  width: 100%;
-  flex: 1;
-  &.cancel {
-    margin-right: 16px;
+@bem-namespace soui {
+  @block prompt-button {
+    width: 100%;
+    flex: 1;
+    @modifier cancel {
+      margin-right: 16px;
+    }
   }
-}
-.message {
-  font-size: 12px;
-  line-height: 1.5em;
-  color: #666;
+  @block prompt-message {
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #666;
+  }
 }

@@ -1,9 +1,11 @@
-.clearfix {
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
+@bem-namespace soui {
+  @block clearfix {
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
   }
 }

@@ -1,28 +1,30 @@
-.view {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-}
+@bem-namespace soui {
+  @block view {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-.main {
-  position: relative;
-  height: 100%;
-  padding-bottom: 24px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  flex: 1;
-}
+  @block main {
+    position: relative;
+    height: 100%;
+    padding-bottom: 24px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+  }
 
-.card {
-  box-sizing: border-box;
-  margin: 0 20px;
-  padding: 46px 12px 0;
-  background-color: #fff;
-  border: 1px solid #eeeff0;
-  border-top: none;
+  @block card {
+    box-sizing: border-box;
+    margin: 0 20px;
+    padding: 46px 12px 0;
+    background-color: #fff;
+    border: 1px solid #eeeff0;
+    border-top: none;
+  }
 }
