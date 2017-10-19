@@ -17,13 +17,20 @@ ReactDOM.render(<App />, document.body)
 ## 特性和规范
 - 图标均使用 [Iconfont](http://iconfont.cn/) 导出，支持以字体的形式修改样式。
 - 均为 SVG 图标，支持多色图标。*[Seriously, Don’t Use Icon Fonts](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/)*
-- 命名规范参考 [Icon - Ant Design](https://ant.design/components/icon-cn/#图标的命名规范)，具体规则为：``[特殊业务名?] - [图标名] - [形状?] - [描边?] - [着色?]``
+- 命名规范参考 [Icon - Ant Design](https://ant.design/components/icon-cn/#图标的命名规范)，具体规则为：``[特殊业务名?] - [图标名] - [形状?] - [描边?] - [方向/位置?] - [着色?]``
   - 形状包含：
     - ``circle``, 圆形
     - ``ellipse``, 椭圆形
     - ``shield``, 盾形
     - ``tall``, 高形
   - 描边固定使用 ``o`` 表示，与之对应的类型为实心
+  - 方向和位置优先平行方向后垂直方向，如 ``-right-top``，包含：
+    - ``left``, 左
+    - ``right``, 右
+    - ``up``, 上
+    - ``down``, 下
+    - ``top``, 顶部
+    - ``bottom``, 底部
   - 着色包含：
     - ``highlight``, 高亮
     - ``colored``, 彩色着色
