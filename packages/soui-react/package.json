@@ -14,6 +14,7 @@
   "author": "yelo",
   "license": "Apache-2.0",
   "scripts": {
+    "start": "npm run build:umd -- --watch",
     "clean": "rm -rf ./dist",
     "build": "npm run build:umd && npm run build:standalone",
     "build:umd": "rollup -c",
