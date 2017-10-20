@@ -1,6 +1,6 @@
 {
   "name": "@sodalife/soui-react",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "soda ui components library, for react",
   "main": "dist/soui.js",
   "unpkg": "dist/soui.standalone.js",
@@ -23,7 +23,7 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@sodalife/soui-css": "^0.2.0",
+    "@sodalife/soui-css": "^0.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -35,7 +35,7 @@
     "rc-animate": "^2.4.1"
   },
   "devDependencies": {
-    "@sodalife/soui-css": "^0.2.0",
+    "@sodalife/soui-css": "^0.2.1",
     "@yelo/rollup-node-external": "^1.0.1",
     "autoprefixer": "^7.1.4",
     "babel-loader": "^7.1.2",
