@@ -1,8 +1,15 @@
 var isDevelopment = process.env.NODE_ENV === 'development'
+var TARGET = process.env.SOUI_CSS_TARGET || 'css'
 
 module.exports = {
   plugins: [
-    require('precss')(),
+    require('precss')({
+      variables: {
+        variables: {
+          TARGET,
+        },
+      },
+    }),
     require('autoprefixer')({
       'browsers': [
         'defaults',
