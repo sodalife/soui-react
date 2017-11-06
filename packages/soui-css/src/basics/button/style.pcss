@@ -94,6 +94,16 @@
       &[type="primary"] {
         background-color: #65d065;
       }
+      &:disabled {
+        background-color: $theme-color-disabled;
+        border: 1px solid $theme-color-disabled;
+        color: color($theme-color-disabled shade(18%));
+        &:active {
+          background-color: $theme-color-disabled;
+          border: 1px solid $theme-color-disabled;
+          color: color($theme-color-disabled shade(18%));
+        }
+      }
     }
   }
 }
