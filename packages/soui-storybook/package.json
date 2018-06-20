@@ -1,7 +1,7 @@
 {
   "name": "@sodalife/soui-storybook",
   "private": true,
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "storybook for soui",
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -11,7 +11,7 @@
   "author": "yelo",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@sodalife/soui-react": "^0.6.1",
+    "@sodalife/soui-react": "^0.6.2",
     "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-info": "^3.2.9",
     "@storybook/addon-knobs": "^3.2.8",
