@@ -86,13 +86,18 @@
   @if $TARGET == wxss {
     @block button {
       background-color: #fff;
+      border: 1px solid $theme-color-primary;
       color: $theme-color-primary;
+      &:after {
+        border: none;
+      }
       &:active {
         background-color: color($theme-color-primary saturation(100%) lightness(97%));
         color: color($theme-color-primary lightness(+ 15%));
       }
       &[type="primary"] {
         background-color: #65d065;
+        border: none;
       }
       &:disabled {
         background-color: $theme-color-disabled;
